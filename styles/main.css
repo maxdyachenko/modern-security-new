@@ -313,7 +313,7 @@ aside .social-group .icon i:hover {
 }
 .container {
 	margin-left: -130px;
-	
+	margin-right: -100px;
 }
 .section1 .container h2 {
 	margin-top: 200px;
@@ -747,7 +747,6 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 
 /*styles for CONTACT PAGE*/
 .filials {
-	padding-right: 95px;
 	margin-top: 80px;
 }
 .filials .filial-wrapper {
@@ -789,10 +788,16 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 .wrap-fix-padding {
 	position: relative;
 }
-.page-wrapper {
-	width:66%;
+.center-content {
 	margin-top: 80px;
+	margin-bottom: 80px;
+	display: flex;
+	justify-content: space-between;
 }
+.content-of-page {
+	width:66%;
+}
+
 .page-wrapper .page-date {
 	margin: 65px 0;
 	font: 300 0.89rem / 1 Open Sans;
@@ -813,9 +818,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 
 /*RIGHT SIDEBAR*/
 .right-sidebar {
-	position: absolute;
-	top: 250px;
-	right: 0;
+	margin-top: 100px;
 	width: 30.50%;
 }
 .right-sidebar .company-news h5 {
@@ -887,6 +890,60 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 
 
 
+/*BLOG styles*/
+.blog .smi-news {
+	margin-top: 60px;
+}
+.blog .smi-news .list-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.blog .smi-news h4 {
+	font: 500 1.41rem / 1 Fira Sans;
+	color: #1CA0F1;
+	text-transform: uppercase;
+}
+.blog .card {
+	width: 47%;
+	margin-top: 50px;
+	padding: 10px 20px 25px 20px;
+}
+.blog .card header {
+	padding-bottom: 10px;
+}
+.blog .card .content .img-wrapper {
+	margin: 0 -20px;
+}
+
+.blog .card .content img {
+	max-width: 100%;
+}
+.blog .card .content .content-title {
+	margin-top: 15px;
+	margin-bottom: 20px;
+	font:400 1.1rem / 1.3 Fira Sans;
+	color: #1CA0F1;
+}
+.blog .card .content .content-text {
+	margin-bottom: 20px;
+	font: 300 0.73rem / 1.3 Open Sans;
+}
+.blog .card footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.blog .card footer .link1 {
+	font: 300 0.73rem / 1 Open Sans;
+	color: #1CA0F1;
+}
+.blog .card footer .link2 {
+	padding: 13px 17px;
+	background: #1CA0F1;
+}
+
+
 
 
 /* Media Breakpoints */
@@ -930,6 +987,10 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	footer.main-footer {
 		padding: 35px;
 	}
+	
+	.blog .card {
+		width: 100%;
+	}
 }
 
 @media (max-width: 1200px) {
@@ -941,6 +1002,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	}
 	.container {
 		margin-left: -80px;
+		margin-right: -40px;
 		
 	}
 	.section1 .container {
@@ -1010,6 +1072,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	
 	.content-wrapper {
 		padding-left: 40px;
+		padding-right: 40px;
 	}
 	.section6 .text-block {
 		padding: 30px 10px 30px 40px; /* padding left as content wrapper */
@@ -1039,10 +1102,6 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	}
 }
 @media (max-width: 992px) {
-	.section1 .container {
-		padding: 0 40px;
-	}
-	
 	.achievments .text {
 		max-width: 140px;
 	}
@@ -1083,11 +1142,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 		flex-direction: column;
 		text-align: center;
 	}
-	
-	
-	.filials {
-		padding-right: 40px;
-	}
+
 }
 
 @media (max-width: 768px) {
@@ -1132,6 +1187,9 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	.right-sidebar {
 		display: none;
 	}
+	.content-of-page {
+		width: 100%;
+	}
 	
 }
 
@@ -1150,13 +1208,15 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	}
 	.container {
 		margin-left: -20px;
+		margin-right: -20px;
 		
 	}
 	.content-wrapper {
 		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.section2, .section4 {
-		padding-right: 20px;
+		padding-right: 0;
 	}
 	.section2 .info-form, .section4 .right .form-block {
 		padding: 15px;
@@ -1177,12 +1237,6 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 		right: 20px;
 		bottom: 20px;
 	}
-	
-	
-	.filials {
-		padding-right: 20px;
-	}
-	
 	
 }
 
