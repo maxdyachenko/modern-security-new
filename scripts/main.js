@@ -2,7 +2,12 @@ $( document ).ready(function() {
     //menu dropdown animation
     $('.toggler').click(function () {
             $(this).toggleClass('active');
-            $('.dropdown').slideToggle(250);
+            $('.dropdown-city').slideToggle(250);
+        }
+    );
+    $('.dropdown-point').click(function () {
+            $(this).toggleClass('active');
+            $(this).find($('.dropdown')).slideToggle(250);
         }
     );
     //scroll for aside menu
