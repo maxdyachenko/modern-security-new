@@ -8,6 +8,7 @@ $( document ).ready(function() {
     $('.dropdown-point').click(function () {
             $(this).toggleClass('active');
             $(this).find($('.dropdown')).slideToggle(250);
+            event.preventDefault();
         }
     );
     //scroll for aside menu

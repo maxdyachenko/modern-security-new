@@ -1356,6 +1356,9 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	.section2 .tab-group-wrapper .controls {
 		display: block;
 	}
+	.tab-group {
+		padding: 30px;
+	}
 	.tab-group .tab.active {
 		justify-content: center;
 	}
