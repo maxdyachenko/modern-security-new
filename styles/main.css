@@ -1246,6 +1246,11 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 		margin-left: 0 !important;
 		padding: 2px 5px;
 	}
+	
+	.person-card {
+		width: 45%;
+	}
+	
 }
 @media (max-width: 1024px) {
 	aside {
@@ -1393,7 +1398,12 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	.tab-group .tab-item {
 		width: 50%;
 	}
-	
+	.our-team-container {
+		margin-top: 30px;
+	}
+	.person-card {
+		margin-bottom: 30px;
+	}
 }
 
 @media (max-width: 576px) {
@@ -1454,6 +1464,14 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 		height: 40px;
 		right: 20px;
 		bottom: 20px;
+	}
+	
+	
+	.person-card {
+		width: 85%;
+	}
+	.team-list {
+		justify-content: center;
 	}
 	
 }
