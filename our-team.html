@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
 <div class="mobile-menu">
     <i class="fa fa-2x fa-bars" aria-hidden="true"></i>
 </div>
@@ -27,7 +28,7 @@
                 <i></i>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown dropdown-city">
                 <ul>
                     <li class="dropdown-item">
                         <a href="#">Москва (Сокольники)</a>
@@ -50,8 +51,21 @@
 
         <div class="menu-items menu-items-1">
             <ul>
-                <li class="menu-item menu-item-1">
+                <li class="menu-item menu-item-1 dropdown-point">
                     <a href="#">Услуги</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li class="dropdown-item active tab-change" data-tab-name="tab-1">
+                                <a href="#">Банкротство физ.лиц</a>
+                            </li>
+                            <li class="dropdown-item tab-change" data-tab-name="tab-2">
+                                <a href="#">Банкротство юр.лиц</a>
+                            </li>
+                            <li class="dropdown-item tab-change" data-tab-name="tab-3">
+                                <a href="#">Банкротство от кредитора</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="menu-item menu-item-1">
                     <a href="#">Результаты работы</a>
@@ -133,67 +147,85 @@
 <div class="navigation">
     <a class="parent" href="#">Главная</a>
     <span>-</span>
-    <a href="#" class="child">Контакты</a>
+    <a href="#" class="child">Наша команда</a>
 </div>
 
 <div class="content-wrapper">
 
-    <section class="filials">
-        <h3>Филиалы компании<br>
-            ООО «Современная защита»</h3>
-        <div class="filials-wrapper">
-            <div class="filial-wrapper">
-                <p class="filial-title">г. Москва</p>
-                <div class="filials-container">
-                    <div class="filial shadowed">
-                        <div class="map">
-                            <iframe src="https://www.google.com/maps/embed/v1/place?q=%D0%BC.%20%D0%9A%D0%B8%D1%82%D0%B0%D0%B9-%D0%93%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4%2C%20%D0%B4.%2015%2F2%2C%20%D0%BE%D1%84.%20308%2C%20%D0%91%D0%A6%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&key=AIzaSyCSdmyv10AP8Mvkdwnp5QbJ8O5exeYJo3Y" allowfullscreen></iframe>
-                        </div>
-                        <div class="text-block">
-                            <p class="adress">Москва - Китай-город</p>
-                            <p class="city">м. Китай-Город, Лубянский проезд, д. 15/2, оф. 308, БЦ Лубянский</p>
-                            <p class="tel">
-                                Тел: 8 (800) 505-24-85<br>
-                                <small>(звонок по России бесплатный, в т.ч. с мобильного)</small>
-                            </p>
-                            <div class="email">
-                                <p>Email: </p>
-                                <a href="mailto:info@sovzashchita.ru"> info@sovzashchita.ru</a>
-                            </div>
-                            <p class="timetable">Режим работы: ПН-ПТ с 10:00 до 20:00</p>
-                            <button class="button-blue">Обратный звонок</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="filial-wrapper">
-                <p class="filial-title">г. Москва</p>
-                <div class="filials-container">
-                    <div class="filial shadowed">
-                        <div class="map">
-                            <iframe src="https://www.google.com/maps/embed/v1/place?q=%D0%BC.%20%D0%9A%D0%B8%D1%82%D0%B0%D0%B9-%D0%93%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4%2C%20%D0%B4.%2015%2F2%2C%20%D0%BE%D1%84.%20308%2C%20%D0%91%D0%A6%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&key=AIzaSyCSdmyv10AP8Mvkdwnp5QbJ8O5exeYJo3Y" allowfullscreen></iframe>
-                        </div>
-                        <div class="text-block">
-                            <p class="adress">Москва - Китай-город</p>
-                            <p class="city">м. Китай-Город, Лубянский проезд, д. 15/2, оф. 308, БЦ Лубянский</p>
-                            <p class="tel">
-                                Тел: 8 (800) 505-24-85<br>
-                                <small>(звонок по России бесплатный, в т.ч. с мобильного)</small>
-                            </p>
-                            <div class="email">
-                                <p>Email: </p>
-                                <a href="mailto:info@sovzashchita.ru"> info@sovzashchita.ru</a>
-                            </div>
-                            <p class="timetable">Режим работы: ПН-ПТ с 10:00 до 20:00</p>
-                            <button class="button-blue">Обратный звонок</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
+    <div class="wrap-fix-padding">
+
+        <section id="section1" class="section1">
+            <div class="container">
+                <h2>Списание всех долгов
+                    с оплатой за результат!
+                </h2>
+                <button class="button-blue">Стать банкротом за 90 дней</button>
+                <div class="achievments">
+                    <div>
+                        <p class="number">8</p>
+                        <p class="text">филиалов<br> по РФ</p>
+                    </div>
+                    <div>
+                        <p class="number">1000+</p>
+                        <p class="text">банкротов<br> по РФ</p>
+                    </div>
+                    <div>
+                        <p class="number">10</p>
+                        <p class="text">лучших арбитражных<br> управляющих</p>
+                    </div>
+                    <div>
+                        <p class="number">27</p>
+                        <p class="text">юристов экспертов<br> в области банкротства</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interactive-block">
+                <div class="scroll-button"></div>
+                <div class="phone"></div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <div class="container">
+        <footer class="main-footer">
+            <div class="company-info">
+                <p>&copy; 2016 Все права защищены. </p>
+                <p>ООО "Современная Защита" (Реквизиты компании)</p>
+            </div>
+            <div class="links">
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Персональные данные</a>
+            </div>
+            <div class="icons">
+                <div class="icon">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-telegram" aria-hidden="true"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
+
+
 <script src="/scripts/libs/jquery-3.2.1.min.js"></script>
 <script src="/scripts/libs/jquery.slimscroll.min.js"></script>
 <script src="/scripts/libs/clamp.min.js"></script>

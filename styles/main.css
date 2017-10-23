@@ -137,6 +137,9 @@ button, input {
 	outline: none;
 }
 .navigation {
+	position: absolute;
+	top: 0;
+	left: 300px;
 	padding: 50px 0 0 50px;
 	
 }
@@ -327,6 +330,7 @@ aside .social-group .icon i:hover {
 .mobile-menu {
 	display: none;
 	position: fixed;
+	top: 0;
 	width: 100%;
 	padding: 10px 20px;
 	text-align: left;
@@ -865,7 +869,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 
 /*styles for CONTACT PAGE*/
 .filials {
-	margin-top: 80px;
+	margin-top: 150px;
 }
 .filials .filial-wrapper {
 	display: flex;
@@ -907,7 +911,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	position: relative;
 }
 .center-content {
-	margin-top: 80px;
+	margin-top: 150px;
 	margin-bottom: 80px;
 	display: flex;
 	justify-content: space-between;
@@ -1223,8 +1227,8 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	.navigation {
 		padding-top: 80px;
 	}
-	.page-wrapper {
-		margin-top: 40px;
+	.navigation {
+		left: 0;
 	}
 	.page-wrapper .page-date {
 		margin: 30px 0;
