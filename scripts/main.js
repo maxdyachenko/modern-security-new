@@ -33,7 +33,23 @@ $( document ).ready(function() {
         return false;
     });
 
+
+    //three dots to cut text
     $('.content-desc').each(function(index, element) {
         $clamp(element, { clamp: 3, useNativeClamp: false });
     });
+
+    //tabgroup
+    var currentTab = "tab-1";
+    $('.tab-change').click(function () {
+        var tab = $(this).attr('data-tab-name');
+        if (currentTab !== tab) {
+            $("[data-tab-name='" + currentTab + "']").removeClass('active');
+            $('.' + currentTab).removeClass('active');
+            $("[data-tab-name='" + tab + "']").addClass('active');
+            $('.' + tab).addClass('active')
+            currentTab = tab;
+        }
+
+    })
 });

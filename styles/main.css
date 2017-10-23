@@ -397,14 +397,94 @@ aside .social-group .icon i:hover {
 }
 
 
+/*styles for section2*/
+.section2 {
+	margin-top: 90px;
+	margin-bottom: 100px;
+}
+.section2 h3 {
+	margin-bottom: 70px;
+}
+.section2 .tab-group-wrapper .controls {
+	display: flex;
+	cursor: pointer;
+	margin-left: 40px;
+}
+.tab-group-wrapper .controls p {
+	padding: 30px 42px;
+	font: 400 0.68rem / 1 Open Sans;
+	text-transform: uppercase;
+}
+.tab-group-wrapper .controls p:nth-of-type(1) {
+	background-color: #CCCCCC;
+}
+.tab-group-wrapper .controls p:nth-of-type(1).active {
+	box-shadow: -1px -1px 7px 0px rgba(0,0,0,0.3);
+}
+.tab-group-wrapper .controls p:last-of-type.active {
+	box-shadow: 1px -1px 7px 0px rgba(0,0,0,0.3);
+}
+.tab-group-wrapper .controls p:nth-of-type(2) {
+	background-color: #1CA0F1;
+}
+.tab-group-wrapper .controls p:nth-of-type(3) {
+	background-color: #FFCC00;
+}
+.tab-group-wrapper .controls p.active {
+	position: relative;
+	box-shadow: 0 -1px 7px 0px rgba(0,0,0,.3);
+	background-color: #fff;
+}
+.tab-group-wrapper .controls p.active:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 6px;
+	left: 0;
+	bottom: -3px;
+	background-color: #fff;
+	z-index: 10;
+}
+.tab-group {
+	padding: 60px 10px 60px 120px;
+}
+.tab-group .tab {
+	display: none;
+}
+.tab-group .tab.active {
+	display: flex;
+	justify-content: space-between;
+}
+.tab-group .tab img {
+	width: 80%;
+	margin-bottom: 40px;
+}
+.tab-group .tab .tab-title {
+	margin-bottom: 50px;
+	color: #1CA0F1;
+	font:400 1.1rem / 1 Fira Sans;
+}
+.tab-group .tab-item {
+	width: 24%;
+}
+.tab-group .tab .tab-content, .tab-group .tab .tab-footer {
+	font: 300 0.73rem / 1.1 Open Sans;
+}
+.tab-group .tab .tab-footer {
+	margin-top: 35px;
+	color: #4D4D4D;
+}
+
+
+
 /* styles for section (info-form-block) */
 h3 {
 	font-size: 1.9rem;
 }
-.section2 {
+.section3 {
 	padding-right: 150px;
 }
-.section2 .info-form {
+.section3 .info-form {
 	display: flex;
 	padding: 70px 70px 60px 70px;
 	border: 2px solid #ffcf13;
@@ -419,12 +499,12 @@ h3 mark {
 	background: none;
 	color: #409bd6;
 }
-.section2 .info-form .text-block p {
+.section3 .info-form .text-block p {
 	margin-top: 30px;
 	color: #000;
 	font: 300 0.72rem / 1.2 Open Sans;
 }
-.section2 .info-form > * {
+.section3 .info-form > * {
 	width: 50%;
 }
 .info-form .button-blue {
@@ -992,13 +1072,16 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	.achievments {
 		padding: 0;
 	}
-	.section2 .info-form {
+	.tab-group{
+		padding-left: 60px;
+	}
+	.section3 .info-form {
 		flex-wrap: wrap;
 	}
-	.section2 .info-form > * {
+	.section3 .info-form > * {
 		width: 100%;
 	}
-	.section2 .info-form .text-block {
+	.section3 .info-form .text-block {
 		margin-bottom: 25px;
 	}
 	.section5 .slider-wrapper {
@@ -1018,6 +1101,9 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	}
 }
 @media (max-width: 1400px) {
+	.tab-group-wrapper .controls p {
+		padding: 20px 30px;
+	}
 	.section4 {
 		padding-right: 75px;
 	}
@@ -1053,10 +1139,10 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 		padding-left: 380px;
 		padding-right: 60px;
 	}
-	.section2, .section4 {
+	.section3, .section4 {
 		padding-right: 80px;
 	}
-	.section2 .info-form {
+	.section3 .info-form {
 		padding: 30px;
 	}
 	.section4 .container {
@@ -1123,7 +1209,9 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 		bottom: 30px;
 	}
 	
-	
+	.tab-group {
+		padding: 40px;
+	}
 	.filials-wrapper {
 		flex-direction: column;
 		padding-right: 0;
@@ -1146,7 +1234,13 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	.achievments .text {
 		max-width: 140px;
 	}
-	.section2, .section4 {
+	.tab-group .tab.active {
+		flex-wrap: wrap;
+	}
+	.tab-group .tab-item {
+		width: 40%;
+	}
+	.section3, .section4 {
 		padding-right: 40px;
 	}
 	.section5 .smi-wrapper .media-list {
@@ -1231,6 +1325,9 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	.content-of-page {
 		width: 100%;
 	}
+	.tab-group .tab-item {
+		width: 50%;
+	}
 	
 }
 
@@ -1256,10 +1353,19 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	.section2, .section4 {
+	.section2 .tab-group-wrapper .controls {
+		display: block;
+	}
+	.tab-group .tab.active {
+		justify-content: center;
+	}
+	.tab-group .tab-item {
+		width: 100%;
+	}
+	.section3, .section4 {
 		padding-right: 0;
 	}
-	.section2 .info-form, .section4 .right .form-block {
+	.section3 .info-form, .section4 .right .form-block {
 		padding: 15px;
 	}
 	.checkbox-group {
