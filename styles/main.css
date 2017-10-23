@@ -865,9 +865,70 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 
 
 
-
-
-/*styles for CONTACT PAGE*/
+/*styles for our team page*/
+.section1-page .container{
+	background: url(/assets/images/section-1-team.png) 0 0 / cover no-repeat;
+}
+.our-team-container {
+	margin-top: 80px;
+}
+.person-card {
+	width: 30%;
+	margin-top: 70px;
+	margin-bottom: 90px;
+	padding: 0 20px 30px 20px;
+	border: 1px solid transparent;
+}
+.team-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.person-avatar {
+	display: block;
+	margin: -70px auto 0 auto;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	background-color: #ccc;
+}
+.person-name {
+	margin: 25px 0;
+	text-align: center;
+	font: 500 1.1rem / 1 Fira Sans;
+}
+.person-position {
+	text-align: center;
+	text-transform: uppercase;
+	color: #4D4D4D;
+	font:400 0.73rem / 1 Open Sans;
+}
+.person-content {
+	margin-top: 33px;
+}
+.person-content p {
+	font:300 0.73rem / 1.2 Open Sans;
+	color: #4D4D4D;
+}
+.person-content p:not(:first-of-type) {
+	margin-top: 30px;
+}
+.person-socials {
+	display: flex;
+	justify-content: center;
+	color: #B3B3B3;
+	font-size: 1.2rem;
+}
+.person-socials i {
+	margin-top: 33px;
+	padding: 0 5px;
+}
+.icon a {
+	color: inherit;
+}
+	
+	
+	/*styles for CONTACT PAGE*/
 .filials {
 	margin-top: 150px;
 }
@@ -1341,6 +1402,9 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	}
 	h3 {
 		font-size: 1.7rem !important;
+	}
+	.section1 .container h2 {
+		font-size: 2.3rem;
 	}
 	.achievments {
 		justify-content: space-around;
