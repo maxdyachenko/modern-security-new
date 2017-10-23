@@ -1129,6 +1129,105 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 
 
 
+/*result of work page styles*/
+.result-of-work {
+	margin-top: 150px;
+}
+.result-of-work h3, .result-of-work .title-caption {
+	margin-bottom: 60px;
+}
+.result-of-work .title-caption {
+	font: 300 1.1rem / 1.2 Fira Sans;
+}
+.result-of-work input {
+	width: 450px;
+	margin-bottom: 35px;
+	padding: 6px 10px;
+	border: 2px solid #4ba1d8;
+	border-radius: 3px;
+	color: #272725;
+	font: 300 0.82rem / 1 Open Sans;
+}
+.result-of-work .checkbox-group {
+	justify-content: flex-start;
+}
+.result-of-work .checkbox-group p {
+	margin-right: 65px;
+	color: #4D4D4D;
+	font: 600 0.82rem / 1 Open Sans;
+}
+.result-of-work .checkbox-group label {
+	margin-right: 65px;
+	font: 400 0.77rem / 1 Open Sans;
+}
+.documents-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 72px;
+}
+.document-wrapper {
+	margin-bottom: 70px;
+}
+.document-wrapper .text-block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.document-wrapper .text-block p {
+	display: flex;
+	flex-direction: column;
+	font:300 1.14rem / 1.3 Open Sans;
+	text-transform: uppercase;
+}
+.document-wrapper .text-block p span {
+	font-weight: 700;
+	text-decoration: line-through;
+}
+.document-wrapper .text-block {
+	display: flex;
+	align-items: center;
+}
+.document-wrapper .text-block .term {
+	min-width: 275px;
+	display: flex;
+	justify-content: space-between;
+}
+.document-wrapper .text-block .term p {
+	width: 50%;
+	font:400 0.5rem / 1 Open Sans;
+	text-transform: none;
+	
+}
+.document-wrapper .text-block .info:not(:last-of-type) {
+	margin-bottom: 5px;
+}
+.document-wrapper .document {
+	position: relative;
+	max-width: 90%;
+	margin-top: 32px;
+}
+.document-wrapper .document img {
+	width: 100%;
+}
+.document-wrapper .document .make-bigger-button {
+	position: absolute;
+	top: 40px;
+	right: 30px;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	background: url(/assets/images/make-bigger.png) 0 0 / cover no-repeat;
+}
+.document-wrapper .document-date {
+	margin-top: 25px;
+	color: #4D4D4D;
+	font: 300 0.63rem / 1 Open Sans;
+}
+
+
+
+
 /* Media Breakpoints */
 @media (max-width: 1600px) {
 	body, html {
@@ -1474,6 +1573,17 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 		justify-content: center;
 	}
 	
+	
+	.result-of-work input {
+		width: 65%;
+	}
+	.result-of-work .checkbox-group {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	.result-of-work .checkbox-group label {
+		margin: 20px 0 0 0;
+	}
 }
 
 
