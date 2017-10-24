@@ -783,6 +783,7 @@ a {
 	
 }
 .our-team-landing .container{
+	padding: 80px 0;
 	background: url(/assets/images/section5-bg.png) 0 0 / cover no-repeat;
 }
 .our-team-landing .bottom-caption {
@@ -1708,6 +1709,9 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	.content-wrapper {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+	.our-team-landing .container {
+		padding: 40px 0;
 	}
 	.our-team-content {
 		padding-left: 40px;
