@@ -63,7 +63,9 @@
                                                     <?php the_title(); ?>
                                                 </p>
                                                 
-                                                <?php the_excerpt(); ?>
+                                                <span class="exerpt">
+                                                    <?php the_excerpt(); ?>
+                                                </span>
                                               
                                             </div>
                                             <!-- <p class="content-text"> -->
