@@ -12,46 +12,162 @@
  * @version 1.0
  */
 
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
+?>
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-
-<?php wp_head(); ?>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/wp-content/themes/twentyseventeen/assets/styles/main.css">
+    <link rel="stylesheet" href="/wp-content/themes/twentyseventeen/assets/styles/font-awesome-4.7.0/css/font-awesome.min.css">
+    <?php wp_head(); ?>
 </head>
+<body  <?php body_class(); ?> >
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
+<div class="mobile-menu">
+    <i class="fa fa-2x fa-bars" aria-hidden="true"></i>
+</div>
+<aside>
+    <div id="content">
+        <!--content block for slimscroll-->
 
-	<header id="masthead" class="site-header" role="banner">
+        <div class="logo">
+            <img src="/wp-content/themes/twentyseventeen/assets/images/logo.png" alt="Logo">
+        </div>
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+        <div class="menu-city-container">
+            <div class="toggler">
+                <p class="selected">Москва (Китай-город)</p>
+                <i></i>
+            </div>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+            <div class="dropdown dropdown-city">
+                <ul>
+                    <li class="dropdown-item">
+                        <a href="#">Москва (Сокольники)</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Москва (Москва-Сити)</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Санкт-Петербург</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Казань</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Екатеринбург</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-	</header><!-- #masthead -->
+        <div class="menu-items menu-items-1">
+            <ul>
+                <li class="menu-item menu-item-1 dropdown-point">
+                    <a href="#">Услуги</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li class="dropdown-item active tab-change" data-tab-name="tab-1">
+                                <a href="#">Банкротство физ.лиц</a>
+                            </li>
+                            <li class="dropdown-item tab-change" data-tab-name="tab-2">
+                                <a href="#">Банкротство юр.лиц</a>
+                            </li>
+                            <li class="dropdown-item tab-change" data-tab-name="tab-3">
+                                <a href="#">Банкротство от кредитора</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item menu-item-1">
+                    <a href="#">Результаты работы</a>
+                </li>
+                <li class="menu-item menu-item-1">
+                    <a href="#">Наша Команда</a>
+                </li>
+                <li class="menu-item menu-item-1">
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </div>
 
-	<?php
+        <div class="menu-items menu-items-2">
+            <ul>
+                <li class="menu-item menu-item-2">
+                    <a href="#">Блог</a>
+                </li>
+                <li class="menu-item menu-item-2">
+                    <a href="#">База знаний</a>
+                </li>
+                <li class="menu-item menu-item-2">
+                    <a href="#">СМИ о нас</a>
+                </li>
+            </ul>
+        </div>
 
-	/*
-	 * If a regular post or page, and not the front page, show the featured image.
-	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-	 */
-	if ( ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
-		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
+        <div class="menu-items menu-items-3">
+            <ul>
+                <li class="menu-item menu-item-3">
+                    <a href="#">Оплата услуг</a>
+                </li>
+            </ul>
+        </div>
 
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
+        <div class="social-group">
+            <div class="icon">
+                <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <i class="fa fa-telegram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="square-buttons-container">
+            <div class="square-button">
+                <p>
+                    Рассчитать стоимость банкротства
+                </p>
+            </div>
+            <div class="square-button">
+                <p>
+                    получить консультацию бесплатно
+                </p>
+            </div>
+        </div>
+
+        <div class="number-container">
+            <p class="number">8 800 502-24-85</p>
+            <p class="number-text">Звонок бесплатный по РФ</p>
+        </div>
+
+    </div>
+</aside>

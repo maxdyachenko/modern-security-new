@@ -427,29 +427,29 @@ function twentyseventeen_scripts() {
 	}
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'twentyseventeen-style' ), '1.0' );
-	wp_style_add_data( 'twentyseventeen-ie8', 'conditional', 'lt IE 9' );
+	// wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'twentyseventeen-style' ), '1.0' );
+	// wp_style_add_data( 'twentyseventeen-ie8', 'conditional', 'lt IE 9' );
 
-	// Load the html5 shiv.
-	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
-	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
+	// // Load the html5 shiv.
+	// wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
+	// wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'twentyseventeen-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
+	// wp_enqueue_script( 'twentyseventeen-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
 
-	$twentyseventeen_l10n = array(
-		'quote'          => twentyseventeen_get_svg( array( 'icon' => 'quote-right' ) ),
-	);
+	// $twentyseventeen_l10n = array(
+	// 	'quote'          => twentyseventeen_get_svg( array( 'icon' => 'quote-right' ) ),
+	// );
 
 	if ( has_nav_menu( 'top' ) ) {
-		wp_enqueue_script( 'twentyseventeen-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
-		$twentyseventeen_l10n['expand']         = __( 'Expand child menu', 'twentyseventeen' );
-		$twentyseventeen_l10n['collapse']       = __( 'Collapse child menu', 'twentyseventeen' );
-		$twentyseventeen_l10n['icon']           = twentyseventeen_get_svg( array( 'icon' => 'angle-down', 'fallback' => true ) );
+		// wp_enqueue_script( 'twentyseventeen-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
+		// $twentyseventeen_l10n['expand']         = __( 'Expand child menu', 'twentyseventeen' );
+		// $twentyseventeen_l10n['collapse']       = __( 'Collapse child menu', 'twentyseventeen' );
+		// $twentyseventeen_l10n['icon']           = twentyseventeen_get_svg( array( 'icon' => 'angle-down', 'fallback' => true ) );
 	}
 
-	wp_enqueue_script( 'twentyseventeen-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
+	// wp_enqueue_script( 'twentyseventeen-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
 
-	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
+	// wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
 
 	wp_localize_script( 'twentyseventeen-skip-link-focus-fix', 'twentyseventeenScreenReaderText', $twentyseventeen_l10n );
 
@@ -544,24 +544,24 @@ add_filter( 'frontpage_template',  'twentyseventeen_front_page_template' );
 /**
  * Implement the Custom Header feature.
  */
-require get_parent_theme_file_path( '/inc/custom-header.php' );
+// require get_parent_theme_file_path( '/inc/custom-header.php' );
 
 /**
  * Custom template tags for this theme.
  */
-require get_parent_theme_file_path( '/inc/template-tags.php' );
+//require get_parent_theme_file_path( '/inc/template-tags.php' );
 
 /**
  * Additional features to allow styling of the templates.
  */
-require get_parent_theme_file_path( '/inc/template-functions.php' );
+//require get_parent_theme_file_path( '/inc/template-functions.php' );
 
 /**
  * Customizer additions.
  */
-require get_parent_theme_file_path( '/inc/customizer.php' );
+//require get_parent_theme_file_path( '/inc/customizer.php' );
 
 /**
  * SVG icons functions and filters.
  */
-require get_parent_theme_file_path( '/inc/icon-functions.php' );
+//require get_parent_theme_file_path( '/inc/icon-functions.php' );
