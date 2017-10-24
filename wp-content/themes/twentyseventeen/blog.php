@@ -30,7 +30,7 @@
                             </header>
                             <div class="content">
                                 <div class="img-wrapper">
-                                    <img src="/assets/images/page-image-example.jpg" alt="Card image">
+                                    <img src="/wp-content/themes/twentyseventeen/assets/images/page-image-example.jpg" alt="Card image">
                                 </div>
                                 <p class="content-title">
                                     “Современная защита” на страже
@@ -45,48 +45,46 @@
                                 <button class="button-blue link2">Читать</button>
                             </footer>
                         </article>
-                        <article class="card shadowed">
-                            <header>
-                                <p class="date">15.03.17</p>
-                            </header>
-                            <div class="content">
-                                <div class="img-wrapper">
-                                    <img src="/assets/images/page-image-example.jpg" alt="Card image">
-                                </div>
-                                <p class="content-title">
-                                    “Современная защита” на страже
-                                    должников ВОТ УЖЕ 4 ГОДА
-                                </p>
-                                <p class="content-text">
-                                    Совзащита обеспечила технологическую реализацию проекта по оплате покупок онлайн с помощью  сервиса Samsung Pay.  Сервис, запущенный при поддержке процессинговой
-                                </p>
-                            </div>
-                            <footer>
-                                <p class="link1">РИА Новости</p>
-                                <button class="button-blue link2">Читать</button>
-                            </footer>
-                        </article>
-                        <article class="card shadowed">
-                            <header>
-                                <p class="date">15.03.17</p>
-                            </header>
-                            <div class="content">
-                                <div class="img-wrapper">
-                                    <img src="/assets/images/page-image-example.jpg" alt="Card image">
-                                </div>
-                                <p class="content-title">
-                                    “Современная защита” на страже
-                                    должников ВОТ УЖЕ 4 ГОДА
-                                </p>
-                                <p class="content-text">
-                                    Совзащита обеспечила технологическую реализацию проекта по оплате покупок онлайн с помощью  сервиса Samsung Pay.  Сервис, запущенный при поддержке процессинговой
-                                </p>
-                            </div>
-                            <footer>
-                                <p class="link1">РИА Новости</p>
-                                <button class="button-blue link2">Читать</button>
-                            </footer>
-                        </article>
+                
+
+                       <?php  $query = new WP_Query('cat=5&showposts=5'); 
+                                if( $query->have_posts() ){
+                                    while( $query->have_posts() ){ $query->the_post(); ?>
+                                        <article class="card shadowed">
+                                            <header>
+                                                <p class="date"><?php the_date(); ?></p>
+                                            </header>
+                                            <div class="content">
+                                                <div class="img-wrapper">
+                                                     <?php if ( function_exists( 'add_theme_support' ) )
+                                                        the_post_thumbnail( array(), array('class' => 'post_img') ); ?>
+                                                </div>
+                                                <p class="content-title">
+                                                    <?php the_title(); ?>
+                                                </p>
+                                                
+                                                <?php the_excerpt(); ?>
+                                              
+                                            </div>
+                                            <!-- <p class="content-text"> -->
+                                            <footer>
+                                                <p class="link1">
+                                                    <?php if ( get_field('from') ) {?>
+                                                    <?php echo get_field('from'); ?>
+                                                    <?php } else { ?>
+                                                        
+                                                    <?php } ?>
+                                                </p>
+                                                <button class="button-blue link2">
+                                                    <a href="<?php the_permalink(); ?>">Читать</a>
+                                                </button>
+                                            </footer>
+                                        </article>
+                                <?php
+                                    }
+                                } 
+                                else echo 'Записей нет.'; ?>
+                        
                     </div>
                 </div>
             </div>
@@ -119,7 +117,7 @@
                 </div>
                 <div class="work-in-company">
                     <p class="title">Работа в компании</p>
-                    <img src="/assets/images/work-in-company.jpg" alt="Work in company">
+                    <img src="/wp-content/themes/twentyseventeen/assets/images/work-in-company.jpg" alt="Work in company">
                     <p class="content-desc">
                         Компания Современная защита
                         открывает набор специалистов
@@ -132,8 +130,6 @@
 
         </section>
 
-
     </div>
-
 
 <?php get_footer(); ?>

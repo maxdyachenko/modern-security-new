@@ -53,4 +53,10 @@ $( document ).ready(function() {
         }
 
     })
+
+    /**/
+    $('.menu-item-17 a').click( () => {
+        $(this).find('.sub-menu').slideToggle('fast');
+    });
+    /**/
 });

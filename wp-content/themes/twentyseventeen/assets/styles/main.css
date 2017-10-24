@@ -373,8 +373,14 @@ aside .social-group .icon i:hover {
 	cursor: pointer;
 	border-radius: 3px;
 	box-shadow: 5px 5px 12px 0px rgba(0,0,0,0.3);
-	
 }
+	
+	.button-blue> a {
+		color: #fff
+	}
+	
+
+
 
 .achievments {
 	display: flex;
@@ -1101,6 +1107,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 
 .blog .card .content img {
 	max-width: 100%;
+	height:100%
 }
 .blog .card .content .content-title {
 	margin-top: 15px;
@@ -1112,6 +1119,12 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	margin-bottom: 20px;
 	font: 300 0.73rem / 1.3 Open Sans;
 }
+/**/
+.content:last-child p {
+	margin-bottom: 20px;
+	font: 300 0.73rem / 1.3 Open Sans;
+}
+/**/
 .blog .card footer {
 	display: flex;
 	align-items: center;
@@ -1448,6 +1461,15 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	}
 
 }
+
+/**/
+
+//.menu-city-container .dropdown { display: none}
+#menu-item-17> a {width:100%}
+.sub-menu { display:none}
+
+/**/
+
 
 @media (max-width: 768px) {
 	/*styles for responsive menu*/

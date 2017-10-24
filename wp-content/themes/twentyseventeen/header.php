@@ -17,6 +17,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -45,7 +46,7 @@
             </div>
 
             <div class="dropdown dropdown-city">
-                <ul>
+<!--                 <ul>
                     <li class="dropdown-item">
                         <a href="#">Москва (Сокольники)</a>
                     </li>
@@ -61,12 +62,13 @@
                     <li class="dropdown-item">
                         <a href="#">Екатеринбург</a>
                     </li>
-                </ul>
+                </ul> -->
+                 <?php wp_nav_menu('menu=Cities'); ?>
             </div>
         </div>
 
         <div class="menu-items menu-items-1">
-            <ul>
+<!--             <ul>
                 <li class="menu-item menu-item-1 dropdown-point">
                     <a href="#">Услуги</a>
                     <div class="dropdown">
@@ -92,11 +94,14 @@
                 <li class="menu-item menu-item-1">
                     <a href="#">Контакты</a>
                 </li>
-            </ul>
+            </ul> -->
+         
+            <?php wp_nav_menu('menu=head'); ?>
+
         </div>
 
         <div class="menu-items menu-items-2">
-            <ul>
+<!--             <ul>
                 <li class="menu-item menu-item-2">
                     <a href="#">Блог</a>
                 </li>
@@ -106,7 +111,8 @@
                 <li class="menu-item menu-item-2">
                     <a href="#">СМИ о нас</a>
                 </li>
-            </ul>
+            </ul> -->
+            <?php wp_nav_menu('menu=un_head'); ?>
         </div>
 
         <div class="menu-items menu-items-3">
