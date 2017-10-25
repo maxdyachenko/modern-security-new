@@ -12,6 +12,8 @@
 /**
  * Twenty Seventeen only works in WordPress 4.7 or later.
  */
+
+
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
@@ -451,7 +453,7 @@ function twentyseventeen_scripts() {
 
 	// wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
 
-	wp_localize_script( 'twentyseventeen-skip-link-focus-fix', 'twentyseventeenScreenReaderText', $twentyseventeen_l10n );
+	// wp_localize_script( 'twentyseventeen-skip-link-focus-fix', 'twentyseventeenScreenReaderText', $twentyseventeen_l10n );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -565,3 +567,4 @@ add_filter( 'frontpage_template',  'twentyseventeen_front_page_template' );
  * SVG icons functions and filters.
  */
 //require get_parent_theme_file_path( '/inc/icon-functions.php' );
+

@@ -31,10 +31,14 @@
                 </div>
             </form>
 
+
+
             <div class="documents-container">
+                 
                 <?php $qava = new WP_Query('cat=7&showposts=9'); ?>
                     <?php if($qava->have_posts()) { ?>
                         <?php while($qava->have_posts()) { $qava->the_post(); ?>
+                            
                             <div class="document-wrapper">
                                 <div class="text-block">
                                     <p class="sum">

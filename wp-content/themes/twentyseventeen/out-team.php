@@ -48,6 +48,7 @@
             </div>
         </section>
 
+
         <section class="our-team-container">
             <div class="team-list">
                 <?php $quy = new WP_Query('cat=6'); ?>
