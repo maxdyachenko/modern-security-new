@@ -24,29 +24,6 @@
                         Сми о нас
                     </h4>
                     <div class="list-wrapper">
-                        <article class="card shadowed">
-                            <header>
-                                <p class="date">15.03.17</p>
-                            </header>
-                            <div class="content">
-                                <div class="img-wrapper">
-                                    <img src="/wp-content/themes/twentyseventeen/assets/images/page-image-example.jpg" alt="Card image">
-                                </div>
-                                <p class="content-title">
-                                    “Современная защита” на страже
-                                    должников ВОТ УЖЕ 4 ГОДА
-                                </p>
-                                <p class="content-text">
-                                    Совзащита обеспечила технологическую реализацию проекта по оплате покупок онлайн с помощью  сервиса Samsung Pay.  Сервис, запущенный при поддержке процессинговой
-                                </p>
-                            </div>
-                            <footer>
-                                <p class="link1">РИА Новости</p>
-                                <button class="button-blue link2">Читать</button>
-                            </footer>
-                        </article>
-                
-
                        <?php  $query = new WP_Query('cat=5&showposts=5'); 
                                 if( $query->have_posts() ){
                                     while( $query->have_posts() ){ $query->the_post(); ?>
@@ -86,17 +63,13 @@
                                     }
                                 } 
                                 else echo 'Записей нет.'; ?>
-                        
                     </div>
                 </div>
             </div>
 
-
             <?php get_sidebar(); ?>
-
-
+        
         </section>
-
     </div>
 
 <?php get_footer(); ?>

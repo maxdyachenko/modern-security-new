@@ -58,13 +58,13 @@ $( document ).ready(function() {
     $('.menu-item-17 a').click( () => {
         $(this).find('.sub-menu').slideToggle('fast');
     });
-    /**/
-
-
-        $('.sliderB').slick({
+    
+    /*U can tuning slider here*/
+    $('.sliderB').slick({
           infinite: true,
           slidesToShow: 3,
           slidesToScroll: 1
-        });
+    });
+    /**/
 });
 
