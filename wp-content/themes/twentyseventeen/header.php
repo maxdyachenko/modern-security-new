@@ -37,7 +37,9 @@
         <!--content block for slimscroll-->
 
         <div class="logo">
-            <img src="/wp-content/themes/twentyseventeen/assets/images/logo.png" alt="Logo">
+            <a href="<?= home_url(); ?>">
+                <img src="/wp-content/themes/twentyseventeen/assets/images/logo.png" alt="Logo">
+            </a>
         </div>
 
         <div class="menu-city-container">
@@ -47,72 +49,15 @@
             </div>
 
             <div class="dropdown dropdown-city">
-<!--                 <ul>
-                    <li class="dropdown-item">
-                        <a href="#">Москва (Сокольники)</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Москва (Москва-Сити)</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Санкт-Петербург</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Казань</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Екатеринбург</a>
-                    </li>
-                </ul> -->
                  <?php wp_nav_menu('menu=Cities'); ?>
             </div>
         </div>
 
         <div class="menu-items menu-items-1">
-<!--             <ul>
-                <li class="menu-item menu-item-1 dropdown-point">
-                    <a href="#">Услуги</a>
-                    <div class="dropdown">
-                        <ul>
-                            <li class="dropdown-item active tab-change" data-tab-name="tab-1">
-                                <a href="#">Банкротство физ.лиц</a>
-                            </li>
-                            <li class="dropdown-item tab-change" data-tab-name="tab-2">
-                                <a href="#">Банкротство юр.лиц</a>
-                            </li>
-                            <li class="dropdown-item tab-change" data-tab-name="tab-3">
-                                <a href="#">Банкротство от кредитора</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu-item menu-item-1">
-                    <a href="#">Результаты работы</a>
-                </li>
-                <li class="menu-item menu-item-1">
-                    <a href="#">Наша Команда</a>
-                </li>
-                <li class="menu-item menu-item-1">
-                    <a href="#">Контакты</a>
-                </li>
-            </ul> -->
-         
             <?php wp_nav_menu('menu=head'); ?>
-
         </div>
 
         <div class="menu-items menu-items-2">
-<!--             <ul>
-                <li class="menu-item menu-item-2">
-                    <a href="#">Блог</a>
-                </li>
-                <li class="menu-item menu-item-2">
-                    <a href="#">База знаний</a>
-                </li>
-                <li class="menu-item menu-item-2">
-                    <a href="#">СМИ о нас</a>
-                </li>
-            </ul> -->
             <?php wp_nav_menu('menu=un_head'); ?>
         </div>
 
