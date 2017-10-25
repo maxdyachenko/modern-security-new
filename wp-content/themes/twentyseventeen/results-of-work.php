@@ -32,33 +32,38 @@
             </form>
 
             <div class="documents-container">
-                <div class="document-wrapper">
-                    <div class="text-block">
-                        <p class="sum">
-                            СПИСАНИЕ: <span>1 233 00 РУБ.</span>
-                        </p>
-                        <div class="info">
-                            <div class="term">
-                                <p>Было</p>
-                                <p>Долг 644 644 руб.</p>
+                <?php $qava = new WP_Query('cat=7&showposts=9'); ?>
+                    <?php if($qava->have_posts()) { ?>
+                        <?php while($qava->have_posts()) { $qava->the_post(); ?>
+                            <div class="document-wrapper">
+                                <div class="text-block">
+                                    <p class="sum">
+                                        СПИСАНИЕ: <span><?= get_field('spisanie'); ?></span>
+                                    </p>
+                                    <div class="info">
+                                        <div class="term">
+                                            <p>Было</p>
+                                            <p><?= get_field('has-been'); ?></p>
+                                        </div>
+                                        <div class="term">
+                                            <p>Решение</p>
+                                            <p><?= get_field('real-time'); ?></p>
+                                        </div>
+                                        <div class="term">
+                                            <p>Номер дела</p>
+                                            <p><?= get_field('deal-number'); ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="document shadowed">
+                                    <!-- <img src="/assets/images/document-example.jpg" alt=""> -->
+                                    <?php the_post_thumbnail(); ?>
+                                    <div class="make-bigger-button"></div>
+                                </div>
+                                <p class="document-date"><?php the_date(); ?></p>
                             </div>
-                            <div class="term">
-                                <p>Решение</p>
-                                <p>Полное списание долга</p>
-                            </div>
-                            <div class="term">
-                                <p>Номер дела</p>
-                                <p>АО - 123456</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="document shadowed">
-                        <img src="/assets/images/document-example.jpg" alt="">
-                        <div class="make-bigger-button"></div>
-                    </div>
-                    <p class="document-date">13.03.15</p>
-                </div>
-
+                <?php }  }  ?>
+            </div>
         </section>
     </div>
 </div>

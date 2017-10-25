@@ -6,7 +6,6 @@
 
 <?php get_header(); ?>
 
-
 <div class="navigation">
     <a class="parent" href="#">Главная</a>
     <span>-</span>
@@ -14,7 +13,6 @@
 </div>
 
 <div class="content-wrapper">
-
 
     <div class="wrap-fix-padding">
 
@@ -50,206 +48,46 @@
             </div>
         </section>
 
-
         <section class="our-team-container">
             <div class="team-list">
-                <div class="person-card shadowed">
-                    <img src="" alt="" class="person-avatar">
-                    <p class="person-name">Хомяков Михаил</p>
-                    <p class="person-position">Ведущий специалист</p>
-                    <div class="person-content">
-                        <p>
-                            РО: МСОПАУ, № в реестре 111111.
-                            Член дисциплинарной комиссии СРО МСОПАУ.
-                        </p>
-                        <p>
-                            Практика с 2001 года.
-                        </p>
-                        <p>
-                            По мнению газеты "Коммерсантъ" входит
-                            в ТОП-10 лучших управляющих России,
-                            по делам о банкротстве физических лиц.
-                        </p>
-                        <p>
-                            По информации Единого Федерального Реестра
-                            Сведений о Банкростве - более 780 публикаций
-                            по делам о банкротстве.
-
-                        </p>
-                    </div>
-                    <div class="person-socials">
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-vk" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-telegram" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-
-                            <a href="#">
-                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="person-card shadowed">
-                    <img src="" alt="" class="person-avatar">
-                    <p class="person-name">Хомяков Михаил</p>
-                    <p class="person-position">Ведущий специалист</p>
-                    <div class="person-content">
-                        <p>
-                            РО: МСОПАУ, № в реестре 111111.
-                            Член дисциплинарной комиссии СРО МСОПАУ.
-                        </p>
-                        <p>
-                            Практика с 2001 года.
-                        </p>
-                        <p>
-                            По мнению газеты "Коммерсантъ" входит
-                            в ТОП-10 лучших управляющих России,
-                            по делам о банкротстве физических лиц.
-                        </p>
-                        <p>
-                            По информации Единого Федерального Реестра
-                            Сведений о Банкростве - более 780 публикаций
-                            по делам о банкротстве.
-
-                        </p>
-                    </div>
-                    <div class="person-socials">
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-vk" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-telegram" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-
-                            <a href="#">
-                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="person-card shadowed">
-                    <img src="" alt="" class="person-avatar">
-                    <p class="person-name">Хомяков Михаил</p>
-                    <p class="person-position">Ведущий специалист</p>
-                    <div class="person-content">
-                        <p>
-                            РО: МСОПАУ, № в реестре 111111.
-                            Член дисциплинарной комиссии СРО МСОПАУ.
-                        </p>
-                        <p>
-                            Практика с 2001 года.
-                        </p>
-                        <p>
-                            По мнению газеты "Коммерсантъ" входит
-                            в ТОП-10 лучших управляющих России,
-                            по делам о банкротстве физических лиц.
-                        </p>
-                        <p>
-                            По информации Единого Федерального Реестра
-                            Сведений о Банкростве - более 780 публикаций
-                            по делам о банкротстве.
-
-                        </p>
-                    </div>
-                    <div class="person-socials">
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-vk" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-telegram" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-
-                            <a href="#">
-                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="person-card shadowed">
-                    <img src="" alt="" class="person-avatar">
-                    <p class="person-name">Хомяков Михаил</p>
-                    <p class="person-position">Ведущий специалист</p>
-                    <div class="person-content">
-                        <p>
-                            РО: МСОПАУ, № в реестре 111111.
-                            Член дисциплинарной комиссии СРО МСОПАУ.
-                        </p>
-                        <p>
-                            Практика с 2001 года.
-                        </p>
-                        <p>
-                            По мнению газеты "Коммерсантъ" входит
-                            в ТОП-10 лучших управляющих России,
-                            по делам о банкротстве физических лиц.
-                        </p>
-                        <p>
-                            По информации Единого Федерального Реестра
-                            Сведений о Банкростве - более 780 публикаций
-                            по делам о банкротстве.
-
-                        </p>
-                    </div>
-                    <div class="person-socials">
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-vk" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-telegram" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-
-                            <a href="#">
-                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="#">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
+                <?php $quy = new WP_Query('cat=6'); ?>
+                    <?php if($quy->have_posts()) { ?>
+                        <?php while($quy->have_posts()) { $quy->the_post(); ?>
+                            <div class="person-card shadowed">
+                                <?php the_post_thumbnail(array(), array('class'=>'person-avatar')); ?>
+                                <p class="person-name"><?= get_field('name'); ?></p>
+                                <p class="person-position"><?= get_field('kind-of-work'); ?></p>
+                                <div class="person-content">
+                                    <p><?php the_content(); ?></p>
+                                </div>
+                                <div class="person-socials">
+                                    <div class="icon">
+                                        <a href="<?= get_field('vk'); ?>">
+                                            <i class="fa fa-vk" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <i class="fa fa-telegram" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    <?php } } ?>
                 </div>
             </div>
         </section>
-
-
     </div>
+</div>
 
-
-<?php get_footer(); ?>
+ <?php get_footer(); ?> 
