@@ -24,6 +24,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/wp-content/themes/twentyseventeen/assets/styles/main.css">
     <link rel="stylesheet" href="/wp-content/themes/twentyseventeen/assets/styles/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/wp-content/themes/twentyseventeen/assets/scripts/libs/slick/slick/slick.css">
     <?php wp_head(); ?>
 </head>
 <body  <?php body_class(); ?> >

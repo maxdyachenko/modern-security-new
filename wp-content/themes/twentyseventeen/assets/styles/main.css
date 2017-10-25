@@ -683,20 +683,19 @@ a {
 	font: 600 0.82rem / 1.4 'Open Sans';
 	text-transform: uppercase;
 }
-.content .content-desc {
+.content .content-desc, .content-descspan> p {
 	position: relative;
 	padding-left: 20px;
-	font:300 0.72rem / 1.3 Open Sans;
-}
-.content .content-desc:before {
+	font:300 0.72rem / 1.3 Open Sans }
+
+.content .content-desc:before, .content .content-descspan> p:before  {
 	content: '';
 	position: absolute;
 	left: 0;
 	top: -10%;
 	height: 120%;
-	border-left: 2px solid #78c8d6;
-	
-}
+	border-left: 2px solid #78c8d6 }
+
 .section5 .slider-wrapper {
 	padding-right: 130px;
 	margin-bottom: 70px;

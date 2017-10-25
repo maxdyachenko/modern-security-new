@@ -211,81 +211,43 @@
         </div>
     </section>
 
+
+    <!-- slider last news -->
     <section class="section5">
         <h3>СМИ о нас</h3>
-        <div class="slider-wrapper">
-            <div class="slides">
-                <article class="slide shadowed">
-                    <header>
-                        <p class="title">СМИ о нас</p>
-                        <p class="time">15.03.17</p>
-                    </header>
-                    <div class="content">
-                        <p class="content-title">
-                            “Современная защита” на страже
-                            должников ВОТ УЖЕ 4 ГОДА
-                        </p>
-                        <p class="content-desc">
-                            Современная защита принимает
-                            активное участие в деловой прессе
-                            и выступает экспертом в обсуждениях обсуждениях
-                        </p>
-                    </div>
-                    <footer>
-                        <p class="link1">Источник: <a href="#">РИА Новости</a></p>
-                        <a href="#" class="link2">Читать</a>
-                    </footer>
-                </article>
-                <article class="slide shadowed">
-                    <header>
-                        <p class="title">СМИ о нас</p>
-                        <p class="time">15.03.17</p>
-                    </header>
-                    <div class="content">
-                        <p class="content-title">
-                            “Современная защита” на страже
-                            должников ВОТ УЖЕ 4 ГОДА
-                        </p>
-                        <p class="content-desc">
-                            Современная защита принимает
-                            активное участие в деловой прессе
-                            и выступает экспертом в обсуждениях
-                        </p>
-                    </div>
-                    <footer>
-                        <p class="link1">Источник: <a href="#">РИА Новости</a></p>
-                        <a href="#" class="link2">Читать</a>
-                    </footer>
-                </article>
-                <article class="slide shadowed">
-                    <header>
-                        <p class="title">СМИ о нас</p>
-                        <p class="time">15.03.17</p>
-                    </header>
-                    <div class="content">
-                        <p class="content-title">
-                            “Современная защита” на страже
-                            должников ВОТ УЖЕ 4 ГОДА
-                        </p>
-                        <p class="content-desc">
-                            Современная защита принимает
-                            активное участие в деловой прессе
-                            и выступает экспертом в обсуждениях обсуждениях
-                        </p>
-                    </div>
-                    <footer>
-                        <p class="link1">Источник: <a href="#">РИА Новости</a></p>
-                        <a href="#" class="link2">Читать</a>
-                    </footer>
-                </article>
-            </div>
+        <div class="sliderB">
+            <?php $query = new WP_Query('cat=5&showposts=5'); 
+                if( $query->have_posts() ){
+                    while( $query->have_posts() ){ $query->the_post(); ?> 
+                        <article class="slide shadowed">
+                            <header>
+                                <p class="title">СМИ о нас</p>
+                                <p class="time"><?php the_date(); ?></p>
+                            </header>
+                            <div class="content">
+                                <p class="content-title">
+                                    <?php the_title(); ?>
+                                </p>
+                                <span class="content-descspan">
+                                   <?php the_excerpt(); ?>
+                                </p>
+                            </div>
+                            <footer>
+                                <p class="link1">Источник: <a href="#"><?= get_field('from'); ?></a></p>
+                                <a href="<?php the_permalink(); ?>" class="link2">Читать</a>
+                            </footer>
+                        </article>
+            <?php 
+                    }
+                } ?>
         </div>
+ 
 
         <div class="smi-wrapper">
             <a class="about-us-link" href="#">О нас пишут и показывают:</a>
             
             <div class="media-list">
-                <div class="item">
+                 <div class="item">
                     <a href="#">
                         <img src="/wp-content/themes/twentyseventeen/assets/images/smi/secret.png" alt="Sekret">
                     </a>
@@ -315,6 +277,7 @@
                         <img src="/wp-content/themes/twentyseventeen/assets/images/smi/village.png" alt="Village">
                     </a>
                 </div>
+
             </div>
             <p class="bottom-caption">Хотите быть в курсе всех новостей нашей компании? Читайте <a href="#">наш блог</a></p>
         </div>
@@ -324,7 +287,7 @@
         <h3>Как нас найти</h3>
         <div class="container">
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed/v1/place?q=%D0%BC.%20%D0%9A%D0%B8%D1%82%D0%B0%D0%B9-%D0%93%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4%2C%20%D0%B4.%2015%2F2%2C%20%D0%BE%D1%84.%20308%2C%20%D0%91%D0%A6%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&key=AIzaSyCSdmyv10AP8Mvkdwnp5QbJ8O5exeYJo3Y" allowfullscreen></iframe>
+    <!--             <iframe src="https://www.google.com/maps/embed/v1/place?q=%D0%BC.%20%D0%9A%D0%B8%D1%82%D0%B0%D0%B9-%D0%93%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4%2C%20%D0%B4.%2015%2F2%2C%20%D0%BE%D1%84.%20308%2C%20%D0%91%D0%A6%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&key=AIzaSyCSdmyv10AP8Mvkdwnp5QbJ8O5exeYJo3Y" allowfullscreen></iframe> -->
             </div>
             <div class="text-block">
                 <p class="adress">Москва - Китай-город</p>

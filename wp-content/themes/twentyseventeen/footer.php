@@ -58,6 +58,7 @@
 <script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/jquery.slimscroll.min.js"></script>
 <script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/clamp.min.js"></script>
 <script src="/wp-content/themes/twentyseventeen/assets/scripts/main.js"></script>
+<script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/slick/slick/slick.min.js"></script>
 
 <?php wp_footer(); ?>
 </body>

@@ -59,4 +59,12 @@ $( document ).ready(function() {
         $(this).find('.sub-menu').slideToggle('fast');
     });
     /**/
+
+
+        $('.sliderB').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1
+        });
 });
+
