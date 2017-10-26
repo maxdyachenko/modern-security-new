@@ -55,19 +55,33 @@ $( document ).ready(function() {
     })
 
     //result of work sort
-    var data = $('.documents-container').children(),
+    var container = $('.documents-container'), data = container.children(),
         swapped = false,
         date = null, date1 = null;
+    console.log(data);
     for (var i = 0; i < data.length - 1; i++){
-        date = $(data[i]).find($('.date')).html();
-        date1 = $(data[i+1]).find($('.date')).html();
-        debugger;
-        if (date > date1) {
-            var temp = data[i];
-            data[i] = data[i+1];
-            data[i+1] = temp;
-            swapped = true;
+        date = $(data[i]).find($('.document-date')).html();
+        date1 = $(data[i+1]).find($('.document-date')).html();
+        date = date.split('.');
+        date1 = date1.split('.');
+        if (date[date.length - 1] > date1[date.length - 1]) {
+            swap(data[i], data[i+1]);
+        }
+        else if (date[date.length - 2] > date1[date.length - 2]){
+            swap(data[i], data[i+1]);
+        }
+        else if (date[0] > date1[0]) {
+            swap(data[i], data[i+1]);
         }
     }
+
+    function swap(el1, el2) {
+        debugger;
+        var temp = el1;
+        el1 = el2;
+        el2 = temp;
+        swapped = true;
+    }
+    container.html(data);
 
 });
