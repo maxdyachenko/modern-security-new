@@ -18,107 +18,70 @@
         <h3>Филиалы компании<br>
             ООО «Современная защита»</h3>
 
-        <?php get_the_category( 6 ) ?>
 
-        <div class="filials-wrapper">
+    <?php    $args = array(
+                'orderby'      => 'name',
+                'order'        => 'ASC',
+                'taxonomy'     => 'category',
+                'exclude'      => array(5,6,7)
+        ); ?>
+
+    <?php $categories = get_categories($args); ?>
+<!--        //if ($categories) {
+//            foreach ($categories as  $cat) {
+//                echo $cat->name;
+//            }
+//        } -->
 
 
-                        <div class="filial-wrapper">
-                            <p class="filial-title">г. Москва</p>
+                <?php
+                    if($categories) {
+                        foreach ($categories as $cat) {
+                            $arg_post = array(
+                                    'ordered' => 'name',
+                                    'order'   => 'ASC',
+                                    'post_type' => 'post',
+                                    'post_status' => 'publish',
+                                    'cat' => $cat->cat_ID //id_рубрик
+                            );
+                            $query = new WP_Query(($arg_post)); ?>
 
-                        <?php $cont = new WP_Query('cat=8'); ?>
-                            <?php if($cont->have_posts()) { ?>
-                                <?php while ($cont->have_posts()) { $cont->the_post(); ?>
-
-                            <div class="filials-container">
-                                <div class="filial shadowed">
-                                    <div class="map" style="height: 200px">
-                                        <?php $damapa = get_field('mappa'); ?>
-                                        <iframe src="<?= $damapa ?>" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="text-block">
-                                        <p class="adress"><?= get_field('cont-city') ?></p>
-                                        <p class="city"><?= get_field('con-adress'); ?></p>
-                                        <p class="tel">
-                                            Тел: <?= get_field('con-phone'); ?><br>
-                                            <small>(звонок по России бесплатный, в т.ч. с мобильного)</small>
-                                        </p>
-                                        <div class="email">
-                                            <p>Email: </p>
-                                            <a href="mailto:info@sovzashchita.ru"> <?= get_field('con-email'); ?></a>
+                            <?php if($query->have_posts() ) ?>
+                                <p class="filial-title"><?php echo $cat->name; ?></p>
+                                <?php while ($query->have_posts() ) : $query->the_post(); ?>
+                                    <div class="filials-wrapper">
+                                        <div class="filial-wrapper">
+                                            <div class="filials-container">
+                                                <div class="filial shadowed">
+                                                    <div class="map" >
+                                                        <?php $damapa = get_field('mappa'); ?>
+                                                        <iframe src="<?= $damapa ?>" allowfullscreen></iframe>
+                                                    </div>
+                                                    <div class="text-block">
+                                                        <p class="adress"><?= get_field('cont-city') ?></p>
+                                                        <p class="city"><?= get_field('con-adress'); ?></p>
+                                                        <p class="tel">
+                                                            Тел: <?= get_field('con-phone'); ?><br>
+                                                            <small>(звонок по России бесплатный, в т.ч. с мобильного)</small>
+                                                        </p>
+                                                        <div class="email">
+                                                            <p>Email: </p>
+                                                            <a href="mailto:info@sovzashchita.ru"> <?= get_field('con-email'); ?></a>
+                                                        </div>
+                                                        <p class="timetable">Режим работы: <?= get_field('con-graphic'); ?></p>
+                                                        <button class="button-blue">Обратный звонок</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <p class="timetable">Режим работы: <?= get_field('con-graphic'); ?></p>
-                                        <button class="button-blue">Обратный звонок</button>
                                     </div>
-                                </div>
-                            </div>
+                                <?php endwhile; wp_reset_postdata(); ?>
 
+                            <?php
+                        }
+                    }
+                ?>
 
-                            <?php }  }  ?>
-                        </div>
-
-            <div class="filial-wrapper">
-                <p class="filial-title">г. Санкт-Петербург</p>
-            <?php $cont = new WP_Query('cat=9'); ?>
-                <?php if($cont->have_posts()) { ?>
-                    <?php while ($cont->have_posts()) { $cont->the_post(); ?>
-                        <div class="filials-container">
-                            <div class="filial shadowed">
-                                <div class="map" style="height: 200px">
-                                    <?php $damapa = get_field('mappa'); ?>
-                                    <iframe src="<?= $damapa ?>" allowfullscreen></iframe>
-                                </div>
-                                <div class="text-block">
-                                    <p class="adress"><?= get_field('cont-city') ?></p>
-                                    <p class="city"><?= get_field('con-adress'); ?></p>
-                                    <p class="tel">
-                                        Тел: <?= get_field('con-phone'); ?><br>
-                                        <small>(звонок по России бесплатный, в т.ч. с мобильного)</small>
-                                    </p>
-                                    <div class="email">
-                                        <p>Email: </p>
-                                        <a href="mailto:info@sovzashchita.ru"> <?= get_field('con-email'); ?></a>
-                                    </div>
-                                    <p class="timetable">Режим работы: <?= get_field('con-graphic'); ?></p>
-                                    <button class="button-blue">Обратный звонок</button>
-                                </div>
-                            </div>
-                        </div>
-                    <?php }  }  ?>
-            </div>
-
-            <div class="filial-wrapper">
-                <p class="filial-title">г. Казань</p>
-            <?php $cont = new WP_Query('cat=10'); ?>
-                <?php if($cont->have_posts()) { ?>
-                    <?php while ($cont->have_posts()) { $cont->the_post(); ?>
-
-                        <div class="filials-container">
-                            <div class="filial shadowed">
-                                <div class="map" style="height: 200px">
-                                    <?php $damapa = get_field('mappa'); ?>
-                                    <iframe src="<?= $damapa ?>" allowfullscreen></iframe>
-                                </div>
-                                <div class="text-block">
-                                    <p class="adress"><?= get_field('cont-city') ?></p>
-                                    <p class="city"><?= get_field('con-adress'); ?></p>
-                                    <p class="tel">
-                                        Тел: <?= get_field('con-phone'); ?><br>
-                                        <small>(звонок по России бесплатный, в т.ч. с мобильного)</small>
-                                    </p>
-                                    <div class="email">
-                                        <p>Email: </p>
-                                        <a href="mailto:info@sovzashchita.ru"> <?= get_field('con-email'); ?></a>
-                                    </div>
-                                    <p class="timetable">Режим работы: <?= get_field('con-graphic'); ?></p>
-                                    <button class="button-blue">Обратный звонок</button>
-                                </div>
-                            </div>
-                        </div>
-                    <?php }  }  ?>
-            </div>
-
-        </div>
     </section>
     <?php get_footer(); ?>
 </div>
