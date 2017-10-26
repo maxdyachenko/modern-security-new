@@ -719,7 +719,7 @@ a {
 	overflow: hidden;
 }
 .section5 .slide {
-	display: flex;
+	display: flex !important;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 420px;
@@ -1469,7 +1469,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	}
 	.container {
 		margin-left: -80px;
-		margin-right: -40px;
+		margin-right: -60px;
 
 	}
 	.section1 .container {
@@ -1579,6 +1579,9 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	}
 	.our-team-content {
 		padding-left: 80px;
+	}
+	.container {
+		margin-right: -40px;
 	}
 }
 @media (max-width: 992px) {

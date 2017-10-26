@@ -15,9 +15,9 @@
                                         <p class="content-title">
                                             <?php the_title();?>
                                         </p>
-                                        <span class="content-descspan">
+                                        <div class="content-descspan">
                                             <?php the_excerpt(); ?>
-                                        </span>
+                                        </div>
                                     </div>
                                     <footer>
                                         <a href="<?php the_permalink(); ?>" class="link2">Читать</a>
