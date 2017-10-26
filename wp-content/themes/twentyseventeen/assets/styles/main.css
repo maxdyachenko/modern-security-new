@@ -985,6 +985,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	flex-direction: column;
 	justify-content: space-between;
 	margin-top: 50px;
+	width: 100%;
 }
 .filials-wrapper {
 	display: flex;
@@ -1636,7 +1637,7 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 
 /**/
 
-//.menu-city-container .dropdown { display: none}
+/*.menu-city-container .dropdown { display: none} */
 #menu-item-17> a {width:100%}
 .sub-menu { display:none}
 .exerpt p {
