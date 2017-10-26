@@ -44,7 +44,7 @@
 
         <div class="menu-city-container">
             <div class="toggler">
-                <p class="selected">Москва (Китай-город)</p>
+                <p class="selected curplace">Москва (Китай-город)</p>
                 <i></i>
             </div>
 

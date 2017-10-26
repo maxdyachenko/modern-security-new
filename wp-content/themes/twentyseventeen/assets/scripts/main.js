@@ -55,7 +55,7 @@ $( document ).ready(function() {
     })
 
     /**/
-    $('.menu-item-17 a').click( () => {
+    $('.menu-item-17 a').on('click', function () {
         $(this).find('.sub-menu').slideToggle('fast');
     });
     
@@ -65,6 +65,22 @@ $( document ).ready(function() {
           slidesToShow: 3,
           slidesToScroll: 1
     });
+
+    $(function() {
+    	var urlIP = 'http://freegeoip.net/json/';
+    	$.getJSON(urlIP, function (data) {
+    	        var current = null;
+    	        current = data.region_name;
+    	        if(current) {
+    	            $('.curplace').text(current);
+                }
+            }
+        )
+    })
+
+
     /**/
 });
+
+
 

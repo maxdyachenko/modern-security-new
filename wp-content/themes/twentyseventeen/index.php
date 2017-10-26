@@ -171,131 +171,19 @@
             <div class="our-team-content">
                 <h3>Для вас работают</h3>
                 <div class="team-list">
-                    <div class="person-card">
-                        <img src="" alt="" class="person-avatar">
-                        <p class="person-name">Хомяков Михаил</p>
-                        <p class="person-position">Ведущий специалист</p>
-                        <div class="person-content">
-                            <p>
-                                РО: МСОПАУ, № в реестре 111111.
-                                Член дисциплинарной комиссии СРО МСОПАУ.
-                            </p>
-                            <p>
-                                Практика с 2001 года.
-                            </p>
-                            <p>
-                                По мнению газеты "Коммерсантъ" входит
-                                в ТОП-10 лучших управляющих России,
-                                по делам о банкротстве физических лиц.
-                            </p>
-                            <p>
-                                По информации Единого Федерального Реестра
-                                Сведений о Банкростве - более 780 публикаций
-                                по делам о банкротстве.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="person-card">
-                        <img src="" alt="" class="person-avatar">
-                        <p class="person-name">Хомяков Михаил</p>
-                        <p class="person-position">Ведущий специалист</p>
-                        <div class="person-content">
-                            <p>
-                                РО: МСОПАУ, № в реестре 111111.
-                                Член дисциплинарной комиссии СРО МСОПАУ.
-                            </p>
-                            <p>
-                                Практика с 2001 года.
-                            </p>
-                            <p>
-                                По мнению газеты "Коммерсантъ" входит
-                                в ТОП-10 лучших управляющих России,
-                                по делам о банкротстве физических лиц.
-                            </p>
-                            <p>
-                                По информации Единого Федерального Реестра
-                                Сведений о Банкростве - более 780 публикаций
-                                по делам о банкротстве.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="person-card">
-                        <img src="" alt="" class="person-avatar">
-                        <p class="person-name">Хомяков Михаил</p>
-                        <p class="person-position">Ведущий специалист</p>
-                        <div class="person-content">
-                            <p>
-                                РО: МСОПАУ, № в реестре 111111.
-                                Член дисциплинарной комиссии СРО МСОПАУ.
-                            </p>
-                            <p>
-                                Практика с 2001 года.
-                            </p>
-                            <p>
-                                По мнению газеты "Коммерсантъ" входит
-                                в ТОП-10 лучших управляющих России,
-                                по делам о банкротстве физических лиц.
-                            </p>
-                            <p>
-                                По информации Единого Федерального Реестра
-                                Сведений о Банкростве - более 780 публикаций
-                                по делам о банкротстве.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="person-card">
-                        <img src="" alt="" class="person-avatar">
-                        <p class="person-name">Хомяков Михаил</p>
-                        <p class="person-position">Ведущий специалист</p>
-                        <div class="person-content">
-                            <p>
-                                РО: МСОПАУ, № в реестре 111111.
-                                Член дисциплинарной комиссии СРО МСОПАУ.
-                            </p>
-                            <p>
-                                Практика с 2001 года.
-                            </p>
-                            <p>
-                                По мнению газеты "Коммерсантъ" входит
-                                в ТОП-10 лучших управляющих России,
-                                по делам о банкротстве физических лиц.
-                            </p>
-                            <p>
-                                По информации Единого Федерального Реестра
-                                Сведений о Банкростве - более 780 публикаций
-                                по делам о банкротстве.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="person-card">
-                        <img src="" alt="" class="person-avatar">
-                        <p class="person-name">Хомяков Михаил</p>
-                        <p class="person-position">Ведущий специалист</p>
-                        <div class="person-content">
-                            <p>
-                                РО: МСОПАУ, № в реестре 111111.
-                                Член дисциплинарной комиссии СРО МСОПАУ.
-                            </p>
-                            <p>
-                                Практика с 2001 года.
-                            </p>
-                            <p>
-                                По мнению газеты "Коммерсантъ" входит
-                                в ТОП-10 лучших управляющих России,
-                                по делам о банкротстве физических лиц.
-                            </p>
-                            <p>
-                                По информации Единого Федерального Реестра
-                                Сведений о Банкростве - более 780 публикаций
-                                по делам о банкротстве.
-
-                            </p>
-                        </div>
-                    </div>
+                <?php $rezidents = new WP_Query('cat=6&showposts=6'); ?>
+                    <?php if($rezidents->have_posts()) { ?>
+                        <?php while($rezidents->have_posts()) { $rezidents->the_post(); ?>
+                            <div class="person-card">
+                                <?php the_post_thumbnail(array(), array('class'=>'person-card')); ?>
+<!--                                <img src="" alt="" class="person-card">-->
+                                <p class="person-name"><?= the_field('name'); ?></p>
+                                <p class="person-position"><?= the_field('kind-of-work'); ?></p>
+                                <div class="person-content">
+                                    <p><?php the_content(); ?></p>
+                                </div>
+                            </div>
+                    <?php }  }  ?>
                 </div>
                 <p class="bottom-caption">
                     ...а так же еще <a href="#">22 профессионала</a> в сфере банкротсва и юриспруденции.
@@ -368,7 +256,7 @@
                                 </p>
                                 <span class="content-descspan">
                                    <?php the_excerpt(); ?>
-                                </p>
+                                </span>
                             </div>
                             <footer>
                                 <p class="link1">Источник: <a href="#"><?= get_field('from'); ?></a></p>
@@ -425,7 +313,7 @@
         <h3>Как нас найти</h3>
         <div class="container">
             <div class="map">
-    <!--             <iframe src="https://www.google.com/maps/embed/v1/place?q=%D0%BC.%20%D0%9A%D0%B8%D1%82%D0%B0%D0%B9-%D0%93%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4%2C%20%D0%B4.%2015%2F2%2C%20%D0%BE%D1%84.%20308%2C%20%D0%91%D0%A6%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&key=AIzaSyCSdmyv10AP8Mvkdwnp5QbJ8O5exeYJo3Y" allowfullscreen></iframe> -->
+              <iframe src="https://www.google.com/maps/embed/v1/place?q=%D0%BC.%20%D0%9A%D0%B8%D1%82%D0%B0%D0%B9-%D0%93%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4%2C%20%D0%B4.%2015%2F2%2C%20%D0%BE%D1%84.%20308%2C%20%D0%91%D0%A6%20%D0%9B%D1%83%D0%B1%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9&key=AIzaSyCSdmyv10AP8Mvkdwnp5QbJ8O5exeYJo3Y" allowfullscreen></iframe>
             </div>
             <div class="text-block">
                 <p class="adress">Москва - Китай-город</p>
