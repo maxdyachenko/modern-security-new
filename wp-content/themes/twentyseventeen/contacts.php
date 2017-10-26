@@ -120,6 +120,7 @@
 
         </div>
     </section>
+    <?php get_footer(); ?>
 </div>
 
 
@@ -132,4 +133,3 @@
 <!--<script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/jquery.slimscroll.min.js"></script>-->
 <!--<script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/clamp.min.js"></script>-->
 <!--<script src="/wp-content/themes/twentyseventeen/assets/scripts/main.js"></script>-->
-<?php get_footer(); ?>

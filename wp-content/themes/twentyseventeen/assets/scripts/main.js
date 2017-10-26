@@ -66,16 +66,24 @@ $( document ).ready(function() {
           slidesToScroll: 1
     });
 
-    $(function() {
-    	var urlIP = 'http://freegeoip.net/json/';
-    	$.getJSON(urlIP, function (data) {
-    	        var current = null;
-    	        current = data.region_name;
-    	        if(current) {
-    	            $('.curplace').text(current);
-                }
-            }
-        )
+    // $(function() {
+    // 	var urlIP = 'http://freegeoip.net/json/';
+    // 	$.getJSON(urlIP, function (data) {
+    // 	        var current = null;
+    // 	        current = data.region_name;
+    // 	        if(current) {
+    // 	            $('.curplace').text(current);
+    //             }
+    //         }
+    //     )
+    // })
+
+    $('.choice-sity li').click(function () {
+        $('.curplace').text($(this).text());
+        $('.dropdown-city').slideToggle(250);
+
+        var dataTOmap = $(this).attr('data-city');
+        $('.mytarget').attr('src', dataTOmap);
     })
 
 

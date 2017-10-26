@@ -88,7 +88,8 @@
                 </div>
             </div>
         </section>
+    <?php get_footer(); ?>
     </div>
+
 </div>
 
- <?php get_footer(); ?> 

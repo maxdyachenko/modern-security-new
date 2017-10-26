@@ -49,7 +49,16 @@
             </div>
 
             <div class="dropdown dropdown-city">
-                 <?php wp_nav_menu('menu=Cities'); ?>
+                <ul class="choice-sity">
+                    <?php $citydrop = new WP_Query('cat='); ?>
+                        <?php if($citydrop->have_posts()) { ?>
+                            <?php while($citydrop->have_posts()) { $citydrop->the_post(); ?>
+                                <li  data-cat="<?php wp_get_post_categories(); ?>"
+                                     data-city="<?= get_field('mappa'); ?>">
+                                            <?= get_field('cont-city'); ?>
+                                </li>
+                    <?php }  }  ?>
+                </ul>
             </div>
         </div>
 
