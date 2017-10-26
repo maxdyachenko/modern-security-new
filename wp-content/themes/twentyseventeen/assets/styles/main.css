@@ -722,9 +722,28 @@ a {
 	display: flex !important;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 420px;
+	width: 80%;
 	height: 370px;
 	padding: 42px 30px;
+	margin: 15px
+}
+.slick-list {
+	padding: 10px !important;
+}
+.slick-prev, .slick-next {
+	position: absolute;
+	width: 20px;
+	height: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: url(../images/control.png) 0 0 / cover no-repeat;
+}
+.slick-prev {
+	left: -10px;
+}
+.slick-next {
+	right: -10px;
+	transform: rotate(180deg) translateY(50%);
 }
 .section5 .slide header, .section5 .slide footer {
 	display: flex;

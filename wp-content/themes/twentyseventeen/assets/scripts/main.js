@@ -61,10 +61,35 @@ $( document ).ready(function() {
     
     /*U can tuning slider here*/
     $('.sliderB').slick({
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 1
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: '<button class="slick-prev" type="button"></button>',
+        nextArrow: '<button class="slick-next" type="button"></button>',
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
-    /**/
 });
 
