@@ -132,4 +132,4 @@
 <!--<script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/jquery.slimscroll.min.js"></script>-->
 <!--<script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/clamp.min.js"></script>-->
 <!--<script src="/wp-content/themes/twentyseventeen/assets/scripts/main.js"></script>-->
-<?php //get_footer(); ?>
+<?php get_footer(); ?>
