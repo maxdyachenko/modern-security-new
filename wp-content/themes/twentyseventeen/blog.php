@@ -40,9 +40,9 @@
                                                     <?php the_title(); ?>
                                                 </p>
                                                 
-                                                <span class="exerpt">
+                                                <div class="exerpt">
                                                     <?php the_excerpt(); ?>
-                                                </span>
+                                                </div>
                                               
                                             </div>
                                             <!-- <p class="content-text"> -->

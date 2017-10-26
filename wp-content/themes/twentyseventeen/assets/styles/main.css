@@ -719,7 +719,7 @@ a {
 	overflow: hidden;
 }
 .section5 .slide {
-	display: flex;
+	display: flex !important;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 420px;

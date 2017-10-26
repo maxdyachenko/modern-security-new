@@ -366,9 +366,9 @@
                                 <p class="content-title">
                                     <?php the_title(); ?>
                                 </p>
-                                <p class="content-desc">
+                                <div class="content-desc">
                                    <?php the_excerpt(); ?>
-                                </p>
+                                </div>
                             </div>
                             <footer>
                                 <p class="link1">Источник: <a href="#"><?= get_field('from'); ?></a></p>

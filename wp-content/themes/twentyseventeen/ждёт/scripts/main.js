@@ -36,7 +36,7 @@ $( document ).ready(function() {
 
 
     //three dots to cut text
-    $('.content-desc').each(function(index, element) {
+    $('.content-desc').find($('p')).each(function(index, element) {
         $clamp(element, { clamp: 3, useNativeClamp: false });
     });
 
