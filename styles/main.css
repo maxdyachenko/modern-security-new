@@ -714,12 +714,30 @@ a {
 	overflow: hidden;
 }
 .section5 .slide {
-	display: flex;
+	display: flex !important; /* to interrupt slider inline styles */
 	flex-direction: column;
 	justify-content: space-between;
 	width: 420px;
 	height: 370px;
 	padding: 42px 30px;
+}
+.slick-list {
+	padding: 10px !important;
+}
+.slick-prev, .slick-next {
+	position: absolute;
+	width: 20px;
+	height: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: url(/assets/images/control.png) 0 0 / cover no-repeat;
+}
+.slick-prev {
+	left: -10px;
+}
+.slick-next {
+	right: -10px;
+	transform: rotate(180deg) translateY(50%);
 }
 .section5 .slide header, .section5 .slide footer {
 	display: flex;
