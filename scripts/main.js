@@ -48,9 +48,123 @@ $( document ).ready(function() {
             $("[data-tab-name='" + currentTab + "']").removeClass('active');
             $('.' + currentTab).removeClass('active');
             $("[data-tab-name='" + tab + "']").addClass('active');
-            $('.' + tab).addClass('active')
+            $('.' + tab).addClass('active');
             currentTab = tab;
         }
 
-    })
+    });
+
+    //result of work sort
+    var container = $('.documents-container'), data = container.children(),
+        date = null, date1 = null,
+        dataSortByDate , dataSortByPrice,
+        checkedData = false, checkedPrice = false,
+        checkbox1 = $('#checkbox1-gr'), checkbox2 = $('#checkbox2-gr');
+
+
+    var currentData = {};
+    currentData = $.extend(true, {}, data);
+    function sortByDate(dataCustom) {
+        for (var i = 0; i < currentData.length - 1; i++){
+            for (var j = 0; j < currentData.length - 1 - i; j++) {
+                date = $(currentData[j]).find($('.document-date')).html().split('.');
+                date1 = $(currentData[j+1]).find($('.document-date')).html().split('.');
+                if (date1[2] > date[2]) {
+                    currentData = swap(currentData, j);
+                }
+                else if (date1[2] === date[2]){
+                    if (date1[1] > date[1]) {
+                        currentData = swap(currentData, j);
+                    }
+                    else if (date1[0] > date[0]){
+                        currentData = swap(currentData, j);
+                    }
+                }
+            }
+        }
+
+        container.html(currentData);
+        currentData = $.extend(true, {}, dataSortByDate);
+    }
+    function swap(obj, i) {
+        var temp = obj[i];
+        obj[i] = obj[i+1];
+        obj[i+1] = temp;
+        return obj;
+    }
+
+
+    function sortByPrice() {
+        for (var i = 0; i < currentData.length - 1; i++){
+            for (var j = 0; j < currentData.length - 1 - i; j++) {
+                sum = $(currentData[j]).find($('.sum')).find($('span')).html().split(' ');
+                sum1 = $(currentData[j+1]).find($('.sum')).find($('span')).html().split(' ');
+                sum.pop();sum1.pop();
+                sum = parseInt(sum.join('')); sum1 = parseInt(sum1.join(''));
+                if (sum1 > sum) {
+                    currentData = swap(currentData, j);
+                }
+            }
+        }
+        container.html(currentData);
+    }
+
+    function setDefaultContent() {
+        container.html(data);
+        currentData = $.extend(true, {}, data);
+    }
+
+    checkbox1.change(function() {
+        if (checkbox2.attr('checked')) {
+            checkbox2.trigger('click');
+        }
+        if(this.checked) {
+            sortByDate();
+            checkedData = true;
+            $(this).attr('checked', true);
+        }
+        else {
+            setDefaultContent();
+            checkedData = false;
+            $(this).attr('checked', false);
+        }
+    });
+    checkbox2.change(function() {
+        if (checkbox1.attr('checked')) {
+            checkbox1.trigger('click');
+        }
+        if(this.checked) {
+            sortByPrice();
+            checkedPrice = true;
+            $(this).attr('checked', true);
+        }
+        else {
+            setDefaultContent();
+            checkedPrice = false;
+            $(this).attr('checked', false);
+        }
+    });
+
+    //results of work search
+    var input = $('#search-gr');
+    input.change(function(){
+        if (input.val() != '') {
+            findDocument(input.val());
+            checkbox1.attr('disabled', true);
+            checkbox2.attr('disabled', true);
+        }
+        else {
+            setDefaultContent();
+            checkbox1.attr('disabled', false);
+            checkbox2.attr('disabled', false);
+        }
+    });
+    function findDocument(value) {
+        for (var i = 0; i < currentData.length - 1; i++) {
+            if (value === $(currentData[i]).find($('.deal-number')).html()) {
+                currentData = currentData[i];
+                container.html(currentData);
+            }
+        }
+    }
 });
