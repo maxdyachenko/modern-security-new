@@ -786,6 +786,9 @@ a {
 	padding: 0 100px;
 
 }
+.person-card img {
+	width: 140px !important; height: 140px;
+}
 .our-team-landing .container{
 	padding: 80px 0;
 	background: url('/wp-content/themes/twentyseventeen/assets/images/section5-bg.png') 0 0 / cover no-repeat;

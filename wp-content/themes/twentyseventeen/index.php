@@ -176,7 +176,7 @@
                         <?php while($rezidents->have_posts()) { $rezidents->the_post(); ?>
                             <div class="person-card">
                                 <?php the_post_thumbnail(array(), array('class'=>'person-card')); ?>
-<!--                                <img src="" alt="" class="person-card">-->
+
                                 <p class="person-name"><?= the_field('name'); ?></p>
                                 <p class="person-position"><?= the_field('kind-of-work'); ?></p>
                                 <div class="person-content">

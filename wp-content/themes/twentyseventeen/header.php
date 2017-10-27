@@ -41,25 +41,34 @@
                 <img src="/wp-content/themes/twentyseventeen/assets/images/logo.png" alt="Logo">
             </a>
         </div>
+        <!-- list of cities -->
+        <?php    $citItem = array(
+            'orderby'      => 'ID',
+            'order'        => 'ASC',
+            'taxonomy'     => 'category',
+            'exclude'      => array(5,6,7)
+        ); ?>
+
+        <?php $cities = get_categories( $citItem ); ?>
 
         <div class="menu-city-container">
             <div class="toggler">
-                <p class="selected curplace">Москва (Китай-город)</p>
+                <p class="selected curplace">г. Москва</p>
                 <i></i>
             </div>
-
-            <div class="dropdown dropdown-city">
+            <div class="dropdown dropdown-city" >
                 <ul class="choice-sity">
-                    <?php $citydrop = new WP_Query('cat='); ?>
-                        <?php if($citydrop->have_posts()) { ?>
-                            <?php while($citydrop->have_posts()) { $citydrop->the_post(); ?>
-                                <li  data-cat="<?php wp_get_post_categories(); ?>"
-                                     data-city="<?= get_field('mappa'); ?>">
-                                            <?= get_field('cont-city'); ?>
-                                </li>
-                    <?php }  }  ?>
+                <?php if($cities) {
+                    foreach ($cities as $city) {  ?>
+                        <li class="dropdown-item">
+                            <a href="#"><?php echo $city->name ?></a>
+                        </li>
+                 <?php   }
+                } ?>
                 </ul>
             </div>
+
+
         </div>
 
         <div class="menu-items menu-items-1">
