@@ -34,11 +34,11 @@
 
 
             <div class="documents-container">
-                 
+
                 <?php $qava = new WP_Query('cat=7&showposts=9'); ?>
                     <?php if($qava->have_posts()) { ?>
                         <?php while($qava->have_posts()) { $qava->the_post(); ?>
-                            
+
                             <div class="document-wrapper">
                                 <div class="text-block">
                                     <p class="sum">
@@ -70,10 +70,6 @@
             </div>
         </section>
     </div>
+    <?php get_footer(); ?>
 </div>
 
-
-<script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/jquery-3.2.1.min.js"></script>
-<script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/jquery.slimscroll.min.js"></script>
-<script src="/wp-content/themes/twentyseventeen/assets/scripts/libs/clamp.min.js"></script>
-<script src="/wp-content/themes/twentyseventeen/assets/scripts/main.js"></script>
