@@ -52,23 +52,12 @@
         <?php $cities = get_categories( $citItem ); ?>
 
         <div class="menu-city-container">
-            <div class="toggler">
-                <p class="selected curplace">г. Москва</p>
-                <i></i>
-            </div>
-            <div class="dropdown dropdown-city" >
-                <ul class="choice-sity">
+            <select name="sources" id="sources" class="custom-select sources"  placeholder="г. Москва">
                 <?php if($cities) {
                     foreach ($cities as $city) {  ?>
-                        <li class="dropdown-item">
-                            <a href="#"><?php echo $city->name ?></a>
-                        </li>
-                 <?php   }
-                } ?>
-                </ul>
-            </div>
-
-
+                        <option value="<?= $city->name_ID ?>"><?= $city->name?></option>
+                <?php } } ?>
+            </select>
         </div>
 
         <div class="menu-items menu-items-1">
@@ -141,3 +130,4 @@
 
     </div>
 </aside>
+}
