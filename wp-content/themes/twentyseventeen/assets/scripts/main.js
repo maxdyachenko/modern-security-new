@@ -84,74 +84,31 @@ $( document ).ready(function() {
         { Kazan: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101449.58000074391!2d48.98393331817258!3d55.81511080884975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9LCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1509099410402' }
     ];
 
-    // $('.choice-sity li a').click(function (e) {
-    //     e.preventDefault();
-    //     $('.curplace').text($(this).text());
-    //     $('.dropdown-city').slideToggle(250);
-    //
-    //     /*change map*/
-    //     switch ($('.curplace').text()) {
-    //         case 'г. Москва':
-    //             console.log(cityMaps[0].Moscow);
-    //             $('.mytarget').attr('src', cityMaps[0].Moscow);
-    //             break;
-    //         case 'г. Питер':
-    //             $('.mytarget').attr('src', cityMaps[1].Piter);
-    //             break;
-    //         case 'г. Казань':
-    //             $('.mytarget').attr('src', cityMaps[2].Kazan);
-    //             break;
-    //         default:
-    //             console.log((cityMaps[0].Moscow));
-    //     }
-    //
-    //
-    // })
+    $('.choice-sity li a').click(function (e) {
+        e.preventDefault();
+        $('.curplace').text($(this).text());
+        $('.dropdown-city').slideToggle(250);
 
-    /*cistom select*/
-    $(".custom-select").each(function() {
-        var classes = $(this).attr("class"),
-            id      = $(this).attr("id"),
-            name    = $(this).attr("name");
-        var template =  '<div class="' + classes + '">';
-        template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
-        template += '<div class="custom-options">';
-        $(this).find("option").each(function() {
-            template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
-        });
-        template += '</div></div>';
+        /*change map*/
+        switch ($('.curplace').text()) {
+            case 'г. Москва':
+                console.log(cityMaps[0].Moscow);
+                $('.mytarget').attr('src', cityMaps[0].Moscow);
+                break;
+            case 'г. Питер':
+                $('.mytarget').attr('src', cityMaps[1].Piter);
+                break;
+            case 'г. Казань':
+                $('.mytarget').attr('src', cityMaps[2].Kazan);
+                break;
+            default:
+                console.log((cityMaps[0].Moscow));
+        }
 
-        $(this).wrap('<div class="custom-select-wrapper"></div>');
-        $(this).hide();
-        $(this).after(template);
-    });
-    $(".custom-option:first-of-type").hover(function() {
-        $(this).parents(".custom-options").addClass("option-hover");
-    }, function() {
-        $(this).parents(".custom-options").removeClass("option-hover");
-    });
-    $(".custom-select-trigger").on("click", function() {
-        $('html').one('click',function() {
-            $(".custom-select").removeClass("opened");
-        });
-        $(this).parents(".custom-select").toggleClass("opened");
-        event.stopPropagation();
-    });
-    $(".custom-option").on("click", function() {
-        $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
-        $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
-        $(this).addClass("selection");
-        $(this).parents(".custom-select").removeClass("opened");
-        $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+        localStorage.setItem('own', $('.curplace').text());
+    })
+    var gorgorod = localStorage.getItem('own');
+    $('.curplace').text(gorgorod);
 
-        var selectedCity = $('.custom-select-trigger').text();
-
-        localStorage.setItem('sel', selectedCity);
-
-    });
-
-    var thisCity = localStorage.getItem('sel');
-    $('.custom-select-trigger').text(thisCity);
 
 });
-
