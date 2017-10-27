@@ -52,36 +52,120 @@ $( document ).ready(function() {
             currentTab = tab;
         }
 
-    })
+    });
 
     //result of work sort
     var container = $('.documents-container'), data = container.children(),
-        swapped = false,
-        date = null, date1 = null;
-    console.log(data);
-    for (var i = 0; i < data.length - 1; i++){
-        date = $(data[i]).find($('.document-date')).html();
-        date1 = $(data[i+1]).find($('.document-date')).html();
-        date = date.split('.');
-        date1 = date1.split('.');
-        if (date[date.length - 1] > date1[date.length - 1]) {
-            swap(data[i], data[i+1]);
+        date = null, date1 = null,
+        dataSortByDate , dataSortByPrice,
+        checkedData = false, checkedPrice = false,
+        checkbox1 = $('#checkbox1-gr'), checkbox2 = $('#checkbox2-gr');
+
+
+    var currentData = {};
+    currentData = $.extend(true, {}, data);
+    function sortByDate(dataCustom) {
+        for (var i = 0; i < currentData.length - 1; i++){
+            for (var j = 0; j < currentData.length - 1 - i; j++) {
+                date = $(currentData[j]).find($('.document-date')).html().split('.');
+                date1 = $(currentData[j+1]).find($('.document-date')).html().split('.');
+                if (date1[2] > date[2]) {
+                    currentData = swap(currentData, j);
+                }
+                else if (date1[2] === date[2]){
+                    if (date1[1] > date[1]) {
+                        currentData = swap(currentData, j);
+                    }
+                    else if (date1[0] > date[0]){
+                        currentData = swap(currentData, j);
+                    }
+                }
+            }
         }
-        else if (date[date.length - 2] > date1[date.length - 2]){
-            swap(data[i], data[i+1]);
-        }
-        else if (date[0] > date1[0]) {
-            swap(data[i], data[i+1]);
-        }
+
+        container.html(currentData);
+        currentData = $.extend(true, {}, dataSortByDate);
+    }
+    function swap(obj, i) {
+        var temp = obj[i];
+        obj[i] = obj[i+1];
+        obj[i+1] = temp;
+        return obj;
     }
 
-    function swap(el1, el2) {
-        debugger;
-        var temp = el1;
-        el1 = el2;
-        el2 = temp;
-        swapped = true;
+
+    function sortByPrice() {
+        for (var i = 0; i < currentData.length - 1; i++){
+            for (var j = 0; j < currentData.length - 1 - i; j++) {
+                sum = $(currentData[j]).find($('.sum')).find($('span')).html().split(' ');
+                sum1 = $(currentData[j+1]).find($('.sum')).find($('span')).html().split(' ');
+                sum.pop();sum1.pop();
+                sum = parseInt(sum.join('')); sum1 = parseInt(sum1.join(''));
+                if (sum1 > sum) {
+                    currentData = swap(currentData, j);
+                }
+            }
+        }
+        container.html(currentData);
     }
-    container.html(data);
+
+    function setDefaultContent() {
+        container.html(data);
+        currentData = $.extend(true, {}, data);
+    }
+
+    checkbox1.change(function() {
+        if (checkbox2.attr('checked')) {
+            checkbox2.trigger('click');
+        }
+        if(this.checked) {
+            sortByDate();
+            checkedData = true;
+            $(this).attr('checked', true);
+        }
+        else {
+            setDefaultContent();
+            checkedData = false;
+            $(this).attr('checked', false);
+        }
+    });
+    checkbox2.change(function() {
+        if (checkbox1.attr('checked')) {
+            checkbox1.trigger('click');
+        }
+        if(this.checked) {
+            sortByPrice();
+            checkedPrice = true;
+            $(this).attr('checked', true);
+        }
+        else {
+            setDefaultContent();
+            checkedPrice = false;
+            $(this).attr('checked', false);
+        }
+    });
+
+    //results of work search
+    var input = $('#search-gr');
+    input.change(function(){
+        if (input.val() != '') {
+            findDocument(input.val());
+            checkbox1.attr('disabled', true);
+            checkbox2.attr('disabled', true);
+        }
+        else {
+            setDefaultContent();
+            checkbox1.attr('disabled', false);
+            checkbox2.attr('disabled', false);
+        }
+    });
+    function findDocument(value) {
+        for (var i = 0; i < currentData.length - 1; i++) {
+            if (value === $(currentData[i]).find($('.deal-number')).html()) {
+                currentData = currentData[i];
+                container.html(currentData);
+            }
+        }
+    }
 
 });
