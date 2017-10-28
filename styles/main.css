@@ -704,7 +704,7 @@ a {
 	
 }
 .section5 .slider-wrapper {
-	padding-right: 130px;
+	position: relative;
 	margin-bottom: 70px;
 }
 .section5 .slides {
@@ -719,10 +719,15 @@ a {
 	justify-content: space-between;
 	width: 420px;
 	height: 370px;
+	margin: 15px;
 	padding: 42px 30px;
 }
 .slick-list {
+	overflow: hidden;
 	padding: 10px !important;
+}
+.slick-track {
+	display: flex;
 }
 .slick-prev, .slick-next {
 	position: absolute;
@@ -730,6 +735,7 @@ a {
 	height: 30px;
 	top: 50%;
 	transform: translateY(-50%);
+	z-index: 999;
 	background: url(/assets/images/control.png) 0 0 / cover no-repeat;
 }
 .slick-prev {

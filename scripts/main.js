@@ -146,7 +146,7 @@ $( document ).ready(function() {
     });
 
     //slider landing
-    $('.sliderB').slick({
+    $('.slider-wrapper').slick({
         infinite: false,
         speed: 300,
         slidesToShow: 3,
