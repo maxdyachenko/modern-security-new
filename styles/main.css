@@ -572,8 +572,8 @@ h3 mark {
 	content: '';
 	position: absolute;
 	left: -12px; top: -6px;
-	width: 20px;
-	height: 20px;
+	width: 22px;
+	height: 22px;
 	border: 2px solid #409bd6;
 	background: #fff;
 	border-radius: 4px;
@@ -1343,16 +1343,16 @@ footer.main-footer .icons .icon:not(:first-of-type) {
 	margin-bottom: 15px;
 	font: 300 0.82rem / 1 Open Sans;
 }
-.pay-page [type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before {
+.pay-page #checkbox2-pay:not(:checked) + label:before, #checkbox2-pay:checked + label:before {
 	left: 0;
 }
-.pay-page [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
+.pay-page #checkbox2-pay:not(:checked) + label, #checkbox2-pay:checked + label {
 	padding-left: 40px;
 }
-.pay-page [type="checkbox"]:checked + label:after {
+.pay-page [#checkbox2-pay:checked + label:after {
 	left: 1px;
 }
-.pay-page [type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before {
+.pay-page #checkbox2-pay:not(:checked) + label:before, #checkbox2-pay:checked + label:before {
 	top: -4px;
 }
 .pay-page .text-block {
