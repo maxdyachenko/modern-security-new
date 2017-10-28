@@ -178,6 +178,19 @@ $( document ).ready(function() {
         ]
     });
 
+    //vertical slider landing
+    $('.vertical-slider').slick({
+        vertical: true,
+        infinite:false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        slidesPerRow:2,
+        rows:2,
+        verticalSwiping: true,
+        prevArrow: '<button class="slick-prev" type="button"></button>',
+        nextArrow: '<button class="slick-next" type="button"></button>'
+    });
+
 
     //results of work search
     var input = $('#search-gr');
