@@ -23,6 +23,18 @@ $( document ).ready(function() {
         $('body').toggleClass('scroll-hidden');
     });
 
+    //number animation
+    var number = $('.number-to-animate'), values = [8,1000,10,27];
+    for (var i = 0;i < number.length;i++) {
+        (function() {
+            $(number[i]).numerator({
+                toValue: values[i],
+                duration: 2000
+            });
+        })(i);
+    }
+
+
     //scroll to top from bottom
     var $root = $('html, body');
 
