@@ -191,6 +191,23 @@ $( document ).ready(function() {
         nextArrow: '<button class="slick-next" type="button"></button>'
     });
 
+    //preview logic in vertical slider
+    var preview = $('#preview'),
+        thumbContainer = $('.vertical-slider'),
+        document = $('.thumb');
+    document.click(function () {
+        var data = $(this).clone();
+        preview.html(data);
+        var document = preview.find($('.document-wrapper'));
+        document.removeClass('inslider, thumb');
+        document.addClass('active');
+        document.removeAttr('style');
+    });
+
+
+
+
+
 
     //results of work search
     var input = $('#search-gr');

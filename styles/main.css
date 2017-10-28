@@ -706,6 +706,10 @@ a {
 	bottom: 0;
 	box-shadow: inset 0px -10px 0px 30px rgba(255,255,255,0.75);
 }
+
+.document-wrapper.active .sum-inslider {
+	display: none;
+}
 .vertical-slider .document-wrapper.inslider .text-block, .vertical-slider .document-wrapper.inslider .document a{
 	display: none;
 }
@@ -721,7 +725,7 @@ a {
 	font: 700 0.6363rem / 1.1 Open Sans;
 	color: #272725;
 }
-.vertical-slider-wrapper .document-wrapper.active {
+.vertical-slider-wrapper #preview {
 	width: 60%;
 }
 .vertical-slider .document-wrapper.inslider .document{
